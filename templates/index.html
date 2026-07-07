@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ASTRA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+
+            🚀 ASTRA
+
+        </div>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">Missions</a></li>
+
+            <li><a href="#">Rockets</a></li>
+
+            <li><a href="#">Timeline</a></li>
+
+            <li><a href="#">Quiz</a></li>
+
+            <li><a href="#">AI Assistant</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+     <h1>
+
+        Explore India's Journey Beyond Earth
+
+     </h1>
+
+     <p>
+
+        Interactive platform dedicated to ISRO missions,
+        rockets and the vision of Dr. APJ Abdul Kalam.
+
+     </p>
+
+     <button>
+
+        Explore Missions
+
+     </button>
+
+
+    </section>
+
+    <section class="stats">
+
+    <h2>ISRO AT A GLANCE</h2>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="1969">0</h3>
+            <p>ISRO Founded in</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="130">0</h3>
+            <p>Launch Missions</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Satellites</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="counter" data-target="99">0</h3>
+            <p>Mission Success (%)</p>
+        </div>
+
+     </div>
+
+    </section>
+    
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

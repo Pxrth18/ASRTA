@@ -1,0 +1,251 @@
+/* Remove browser defaults */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* Whole page */
+
+body{
+
+    background:radial-gradient(circle at top,#0b1e44,#050816);
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+/* Navigation */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 80px;
+
+    background:rgba(11,16,38,.7);
+
+    backdrop-filter:blur(12px);
+    
+    position:sticky;
+
+    top:0;
+}
+
+
+/* Logo */
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#38BDF8;
+
+    font-family:'Orbitron',sans-serif;
+
+    text-shadow:0 0 15px #38BDF8;
+
+}
+
+
+/* Menu */
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+
+/* Links */
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+}
+
+
+/* Hover Effect */
+
+nav a:hover{
+
+    color:#38BDF8;
+
+}
+
+.hero{
+
+    height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.hero h1{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:60px;
+
+    width:70%;
+
+}
+
+
+.hero p{
+
+    margin-top:30px;
+
+    width:60%;
+
+    font-size:20px;
+
+    color:#cccccc;
+
+}
+
+
+.hero button{
+
+    margin-top:40px;
+
+    padding:15px 40px;
+
+    background:#38BDF8;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:white;
+
+    font-weight:bold;
+
+    box-shadow:0 0 25px #38BDF8;
+
+    transition:.4s;
+
+
+}
+
+
+.hero button:hover{
+
+   transform:translateY(-5px);
+
+   box-shadow:0 0 40px #38BDF8;
+
+}
+
+/* ===========================
+   Mission Statistics
+=========================== */
+
+.stats{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.stats h2{
+
+    font-family:'Orbitron',sans-serif;
+
+    color:#38BDF8;
+
+    margin-bottom:60px;
+
+}
+
+.stats-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px #38BDF8;
+
+}
+
+.stat-card h3{
+
+    font-size:50px;
+
+    color:#38BDF8;
+
+    margin-bottom:15px;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.stat-card p{
+
+    color:#cccccc;
+
+    font-size:18px;
+
+}

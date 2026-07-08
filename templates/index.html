@@ -23,6 +23,14 @@
 
 <body>
 
+      <div id="stars"></div>
+
+      <div class="earth-container">
+         <img src="{{ url_for('static', filename='images/earth.png') }}" alt="Earth" class="earth">
+      </div>
+
+      <div class="shooting-star"></div>
+
     <nav>
 
         <div class="logo">
@@ -100,6 +108,47 @@
         </div>
 
      </div>
+
+    </section>
+
+    <section class="missions-preview">
+
+     <h2>Featured Missions</h2>
+
+      <div class="mission-grid">
+
+         {% for mission in missions %}
+
+         <a href="/mission/{{ mission.id }}" class="mission-link">
+
+          <div class="mission-card">
+
+              <h3>{{ mission.name }}</h3>
+
+              <span class="status">
+
+                  {{ mission.status }}
+
+              </span>
+
+              <p><strong>Destination:</strong> {{ mission.destination }}</p>
+
+              <p><strong>Rocket:</strong> {{ mission.rocket }}</p>
+
+              <p>{{ mission.description }}</p>
+
+              <a href="/mission/{{ mission.id }}" class="explore-btn">
+                Explore Mission 
+
+             </a> 
+
+
+          </div>
+         </a>
+
+         {% endfor %}
+
+      </div>
 
     </section>
     

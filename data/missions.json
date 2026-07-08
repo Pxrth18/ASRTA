@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "name": "Chandrayaan-3",
+    "year": 2023,
+    "rocket": "LVM3",
+    "destination": "Moon",
+    "status": "Successful",
+    "description": "India's third lunar mission achieved a historic soft landing near the Moon's south pole.",
+    "image": "Chandrayaan3.jpg",
+    "launch_date": "14 July 2023",
+    "duration": "52 days",
+    "objectives": [
+    {
+        "title": "Soft landing on the Moon",
+        "info": "Demonstrate autonomous precision landing technology near the lunar south pole."
+    },
+    {
+        "title": "Deploy Pragyan rover",
+        "info": "Validate rover deployment and surface mobility on the Moon."
+    },
+    {
+        "title": "Perform in-situ experiments",
+        "info": "Collect scientific measurements directly from the lunar surface."
+    }
+      ],
+
+    "achievements": [
+    {
+        "title": "Historic lunar south pole landing",
+        "info": "Became the first nation to achieve a successful soft landing near the Moon's south polar region."
+    },
+    {
+        "title": "Fourth nation to soft-land on the Moon",
+        "info": "India joined the United States, Soviet Union (Russia), and China as the fourth country to successfully soft-land a spacecraft on the Moon."
+    },
+    {
+        "title": "Successful Pragyan rover deployment",
+        "info": "The Pragyan rover rolled out from the Vikram lander and conducted in-situ scientific experiments on the lunar surface."
+    },
+    {
+        "title": "Validated critical landing technologies",
+        "info": "Successfully demonstrated autonomous guidance, navigation, hazard detection, and controlled descent technologies for future lunar missions."
+    }
+      ],
+
+    "payloads": [
+    {
+        "title": "ChaSTE",
+        "info": "Measured the thermal properties of lunar soil."
+    },
+    {
+        "title": "ILSA",
+        "info": "Detected seismic activity and vibrations on the Moon."
+    },
+    {
+        "title": "RAMBHA-LP",
+        "info": "Measured plasma density near the lunar surface."
+    }
+      ],
+
+    "engineering_significance":"Validated autonomous precision landing, hazard detection, guidance algorithms, and propulsion technologies required for future lunar and planetary missions.", 
+
+    "timeline": [
+     {
+        "date": "14 July 2023",
+        "event": "Launch aboard LVM3 from Satish Dhawan Space Centre"
+     },
+     {
+        "date": "5 August 2023",
+        "event": "Successfully entered lunar orbit"
+     },
+     {
+        "date": "23 August 2023",
+        "event": "Historic soft landing near the Moon's south pole"
+     },
+     {
+        "date": "24 August 2023",
+        "event": "Pragyan rover deployed and began scientific experiments"
+     }
+     ]
+  },
+  {
+    "id": 2,
+    "name": "Mangalyaan",
+    "year": 2013,
+    "rocket": "PSLV-C25",
+    "destination": "Mars",
+    "status": "Successful",
+    "description": "India became the first Asian nation to reach Mars orbit and the first country to succeed on its first attempt.",
+    "image": "mangalyaan.jpg",
+    "launch_date": "05 November 2013",
+    "duration": "8 years",
+    "objectives": [
+    {
+        "title": "Demonstrate interplanetary mission capability",
+        "info": "Validate India's ability to design, launch and operate a spacecraft on an interplanetary mission."
+    },
+    {
+        "title": "Study the Martian surface and atmosphere",
+        "info": "Collect scientific data on Mars' surface features, atmosphere and mineral composition."
+    },
+    {
+        "title": "Develop deep-space communication",
+        "info": "Test navigation, tracking and communication technologies over interplanetary distances."
+    }
+     ],
+
+    "achievements": [
+    {
+        "title": "First Asian nation to reach Mars",
+        "info": "India became the first Asian country to successfully place a spacecraft in Mars orbit."
+    },
+    {
+        "title": "Succeeded on the first attempt",
+        "info": "India became the first nation to reach Mars orbit on its maiden mission."
+    },
+    {
+        "title": "Highly cost-effective mission",
+        "info": "Completed one of the world's lowest-cost interplanetary missions."
+    },
+    {
+        "title": "Exceeded planned mission life",
+        "info": "Operated for several years beyond its original six-month design life."
+    }
+     ],
+
+    "payloads": [
+    {
+        "title": "Mars Colour Camera (MCC)",
+        "info": "Captured high-resolution images of Mars and its moons."
+    },
+    {
+        "title": "Methane Sensor for Mars (MSM)",
+        "info": "Searched for traces of methane, a possible indicator of geological or biological activity."
+    },
+    {
+        "title": "Lyman Alpha Photometer (LAP)",
+        "info": "Studied hydrogen and deuterium in the Martian atmosphere."
+    },
+    {
+        "title": "Thermal Infrared Imaging Spectrometer (TIS)",
+        "info": "Mapped the mineral composition and surface temperature of Mars."
+    },
+    {
+        "title": "MENCA",
+        "info": "Measured the composition of the Martian exosphere."
+    }
+      ],
+
+    "engineering_significance":"Demonstrated India's ability to design, navigate, and operate an interplanetary spacecraft while achieving exceptional cost efficiency and reliability.",
+
+    "timeline": [
+    {
+        "date": "5 November 2013",
+        "event": "Launched aboard PSLV-C25"
+    },
+    {
+        "date": "30 November 2013",
+        "event": "Departed Earth's sphere of influence"
+    },
+    {
+        "date": "24 September 2014",
+        "event": "Successfully entered Mars orbit"
+    },
+    {
+        "date": "2014-2022",
+        "event": "Conducted scientific observations and exceeded planned mission life"
+    }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Aditya-L1",
+    "year": 2023,
+    "rocket": "PSLV-C57",
+    "destination": "Sun (L1 Point)",
+    "status": "Operational",
+    "description": "India's first dedicated mission to study the Sun.",
+    "image": "adityaL1.jpg",
+    "launch_date": "02 September 2023",
+    "duration": "5 years",
+    "objectives": [
+    {
+        "title": "Study the Sun's corona",
+        "info": "Observe the outermost layer of the Sun to understand coronal heating."
+    },
+    {
+        "title": "Monitor solar activity",
+        "info": "Study solar flares, coronal mass ejections and magnetic fields."
+    },
+    {
+        "title": "Improve space weather prediction",
+        "info": "Provide data to better understand solar events affecting Earth and satellites."
+    }
+    ],
+
+    "achievements": [
+    {
+        "title": "India's first solar observatory",
+        "info": "The country's first dedicated mission to study the Sun."
+    },
+    {
+        "title": "Reached the L1 point",
+        "info": "Successfully entered a halo orbit around the Sun-Earth L1 Lagrange point."
+    },
+    {
+        "title": "Continuous solar observation",
+        "info": "Provides uninterrupted observations of the Sun without Earth's eclipses."
+    }
+    ],
+
+    "payloads": [
+    {
+        "title": "VELC",
+        "info": "Observes the solar corona in visible and infrared wavelengths."
+    },
+    {
+        "title": "SUIT",
+        "info": "Captures ultraviolet images of the Sun's photosphere and chromosphere."
+    },
+    {
+        "title": "SoLEXS",
+        "info": "Measures low-energy solar X-ray emissions."
+    },
+    {
+        "title": "HEL1OS",
+        "info": "Observes high-energy solar X-rays."
+    },
+    {
+        "title": "ASPEX",
+        "info": "Studies particles in the solar wind."
+    },
+    {
+        "title": "PAPA",
+        "info": "Measures the composition of solar wind plasma."
+    },
+    {
+        "title": "Magnetometer",
+        "info": "Measures magnetic fields at the L1 Lagrange point."
+    }
+    ],
+
+    "engineering_significance":"Established India's capability to continuously observe the Sun from the L1 Lagrange point, improving space-weather forecasting and advancing heliophysics research.",
+  
+    "timeline": [
+    {
+        "date": "2 September 2023",
+        "event": "Launched aboard PSLV-C57"
+    },
+    {
+        "date": "19 September 2023",
+        "event": "Performed Trans-Lagrange Injection"
+    },
+    {
+        "date": "6 January 2024",
+        "event": "Successfully inserted into halo orbit around the L1 point"
+    },
+    {
+        "date": "2024-Present",
+        "event": "Continuous observation of the Sun and collection of scientific data"
+    }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gaganyaan",
+    "year": 2025,
+    "rocket": "LVM3",
+    "destination": "Low Earth Orbit",
+    "status": "Upcoming",
+    "description": "India's first human spaceflight mission.",
+    "image": "gaganyaan.jpg",
+    "launch_date": "late 2026",
+    "duration": "3-7 days",
+    "objectives": [
+    {
+        "title": "Demonstrate human spaceflight capability",
+        "info": "Show India's ability to independently send astronauts into space."
+    },
+    {
+        "title": "Develop indigenous crew systems",
+        "info": "Build crew modules, life-support systems and recovery technologies within India."
+    },
+    {
+        "title": "Ensure astronaut safety",
+        "info": "Validate emergency escape, re-entry and recovery systems."
+    }
+    ],
+
+    "achievements": [
+    {
+        "title": "Crew Escape Test successful",
+        "info": "Validated the emergency escape system through a successful test flight."
+    },
+    {
+        "title": "Major indigenous technologies developed",
+        "info": "Built key human-spaceflight technologies within India."
+    },
+    {
+        "title": "Foundation for future crewed missions",
+        "info": "Establishes capabilities for long-term human space exploration."
+    }
+    ],
+
+    "payloads": [
+    {
+        "title": "Crew Module",
+        "info": "Pressurized spacecraft that carries astronauts during the mission."
+    },
+    {
+        "title": "Service Module",
+        "info": "Provides propulsion, electrical power and mission support."
+    },
+    {
+        "title": "Environmental Control & Life Support System",
+        "info": "Maintains breathable air, temperature and pressure for the crew."
+    },
+    {
+        "title": "Crew Escape System",
+        "info": "Rapidly separates the crew module from the rocket during emergencies."
+    },
+    {
+        "title": "Human-rated LVM3",
+        "info": "A modified LVM3 launch vehicle certified for carrying astronauts."
+    }
+    ],
+
+    "engineering_significance":"Developing indigenous human spaceflight technologies—including crew safety, life support, and human-rated launch systems—lays the foundation for India's future crewed space missions.",
+
+    "timeline": [
+    {
+        "date": "21 October 2023",
+        "event": "Crew Escape System Test Vehicle mission successfully completed"
+    },
+    {
+        "date": "2024-2025",
+        "event": "Uncrewed orbital test missions and system validation"
+    },
+    {
+        "date": "Upcoming",
+        "event": "First crewed Gaganyaan mission to Low Earth Orbit"
+    },
+    {
+        "date": "Future",
+        "event": "Recovery of astronauts after a safe splashdown in the Indian Ocean"
+    }
+    ]
+  },
+  {
+    "id": 5,
+
+    "name": "AstroSat",
+
+    "year": 2015,
+
+    "rocket": "PSLV-C30",
+
+    "destination": "Low Earth Orbit",
+
+    "status": "Operational",
+
+    "launch_date": "28 September 2015",
+
+    "duration": "Operational",
+
+    "description": "India's first dedicated multi-wavelength space observatory designed to study celestial objects across ultraviolet and X-ray wavelengths.",
+
+    "image": "astrosat.jpg",
+
+    "engineering_significance": "Established India's capability to build and operate a space observatory with multiple scientific instruments observing the universe simultaneously.",
+
+    "objectives": [
+
+        {
+            "title":"Study compact stars",
+            "info":"Observe neutron stars, pulsars and black holes in multiple wavelengths."
+        },
+
+        {
+            "title":"Observe high-energy universe",
+            "info":"Study energetic cosmic phenomena such as quasars and X-ray binaries."
+        },
+
+        {
+            "title":"Multi-wavelength astronomy",
+            "info":"Observe celestial objects simultaneously in ultraviolet and X-ray bands."
+        }
+
+    ],
+
+    "payloads":[
+
+        {
+            "title":"UVIT",
+            "info":"Ultraviolet Imaging Telescope captures high-resolution ultraviolet images."
+        },
+
+        {
+            "title":"LAXPC",
+            "info":"Large Area X-ray Proportional Counter studies X-ray emissions from compact objects."
+        },
+
+        {
+            "title":"CZTI",
+            "info":"Cadmium Zinc Telluride Imager observes hard X-rays and gamma-ray bursts."
+        },
+
+        {
+            "title":"SXT",
+            "info":"Soft X-ray Telescope studies low-energy X-ray sources."
+        },
+
+        {
+            "title":"SSM",
+            "info":"Scanning Sky Monitor detects transient X-ray events."
+        }
+
+    ],
+
+    "achievements":[
+
+        {
+            "title":"India's first space observatory",
+            "info":"Marked India's entry into dedicated space-based astronomy."
+        },
+
+        {
+            "title":"International scientific collaboration",
+            "info":"Used by researchers worldwide for astrophysical observations."
+        },
+
+        {
+            "title":"Long operational life",
+            "info":"Continues producing valuable scientific data well beyond its planned lifetime."
+        }
+
+    ],
+
+    "timeline":[
+
+        {
+            "date":"28 September 2015",
+            "event":"Successfully launched aboard PSLV-C30."
+        },
+
+        {
+            "date":"October 2015",
+            "event":"Scientific instruments commissioned."
+        },
+
+        {
+            "date":"2016",
+            "event":"Began regular scientific observations."
+        },
+
+        {
+            "date":"Present",
+            "event":"Continues astronomical observations."
+        }
+
+    ]
+  }
+]

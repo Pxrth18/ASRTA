@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>{{ mission.name }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="earth-container">
+    <img src="{{ url_for('static', filename='images/earth.png') }}" class="earth">
+</div>
+
+<nav>
+
+    <div class="logo">🚀 ASTRA</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+
+</nav>
+
+<section class="mission-banner">
+
+    <img src="{{ url_for('static', filename='images/' + mission.image) }}"
+         class="mission-image">
+
+    <div class="mission-details">
+
+        <h1>{{ mission.name }}</h1>
+
+        <span class="status">
+            {{ mission.status }}
+        </span>
+
+        <p class="mission-description">
+            {{ mission.description }}
+        </p>
+
+    </div>
+
+</section>
+
+<section class="mission-info">
+
+    <div class="info-card">
+        <h3>🚀 Rocket</h3>
+        <p>{{ mission.rocket }}</p>
+    </div>
+
+    <div class="info-card">
+        <h3>🌍 Destination</h3>
+        <p>{{ mission.destination }}</p>
+    </div>
+
+    <div class="info-card">
+        <h3>📅 Launch Date</h3>
+        <p>{{ mission.launch_date }}</p>
+    </div>
+
+    <div class="info-card">
+        <h3>⏱ Duration</h3>
+        <p>{{ mission.duration }}</p>
+    </div>
+
+</section>
+
+<section class="glass-panel">
+
+    <h2>🎯 Mission Objectives</h2>
+
+    
+
+        {% for objective in mission.objectives %}
+
+         <div class="info-item">
+
+        <div class="item-title">
+            {{ objective.title }}
+        </div>
+
+         <div class="tooltip">
+            {{ objective.info }}
+        </div>
+
+      </div>
+
+         {% endfor %}
+
+    
+
+</section>
+
+<section class="glass-panel">
+
+    <h2>🛰 Scientific Payloads</h2>
+
+    
+
+      {% for payload in mission.payloads %}
+
+
+         <div class="info-item">
+
+        <div class="item-title">
+            {{ payload.title }}
+        </div>
+
+         <div class="tooltip">
+            {{ payload.info }}
+        </div>
+
+      </div>
+
+         {% endfor %}
+
+    
+
+</section>
+
+<section class="glass-panel">
+
+    <h2>🏆 Major Achievements</h2>
+
+   
+
+      {% for achievements in mission.achievements %}
+
+         <div class="info-item">
+
+        <div class="item-title">
+            {{ achievements.title }}
+        </div>
+
+         <div class="tooltip">
+            {{ achievements.info }}
+        </div>
+
+      </div>
+
+         {% endfor %}
+
+    
+
+</section>
+
+<section class="glass-panel">
+
+    <h2>⚙ Engineering Significance</h2>
+
+    <p>
+
+        {{ mission.engineering_significance }}
+
+    </p>
+
+</section>
+
+<section class="glass-panel">
+
+   <h2>🛰 Mission Timeline</h2>
+
+    <div class="timeline">
+
+      {% for event in mission.timeline %}
+
+        <div class="timeline-item">
+
+           <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                <h3>{{ event.date }}</h3>
+
+                <p>{{ event.event }}</p>
+
+           </div>
+
+       </div>
+
+      {% endfor %}
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

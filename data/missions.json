@@ -460,5 +460,566 @@
         }
 
     ]
-  }
+  },
+  {
+    "id": 6,
+
+    "name": "XPoSat",
+
+    "year": 2024,
+
+    "rocket": "PSLV-C58",
+
+    "destination": "Low Earth Orbit",
+
+    "status": "Operational",
+
+    "launch_date": "1 January 2024",
+
+    "duration": "Operational",
+
+    "description": "India's first dedicated X-ray Polarimeter Satellite, designed to study the polarization of cosmic X-rays from black holes, neutron stars and other energetic celestial objects.",
+
+    "image": "xposat.jpg",
+
+    "engineering_significance": "Introduced India's capability to perform space-based X-ray polarimetry, helping scientists understand the geometry and emission mechanisms of extreme cosmic environments.",
+
+    "objectives": [
+
+        {
+            "title":"Study X-ray polarization",
+            "info":"Measure the polarization of X-rays emitted by celestial sources."
+        },
+
+        {
+            "title":"Observe compact objects",
+            "info":"Investigate black holes, neutron stars and pulsars."
+        },
+
+        {
+            "title":"Advance high-energy astrophysics",
+            "info":"Provide data that complements traditional X-ray observations."
+        }
+
+    ],
+
+    "payloads":[
+
+        {
+            "title":"POLIX",
+            "info":"Measures the polarization of medium-energy X-rays from astronomical sources."
+        },
+
+        {
+            "title":"XSPECT",
+            "info":"Analyzes the energy spectrum and timing characteristics of X-ray sources."
+        }
+
+    ],
+
+    "achievements":[
+
+        {
+            "title":"India's first X-ray polarimetry mission",
+            "info":"Established India's capability in space-based X-ray polarization studies."
+        },
+
+        {
+            "title":"Successful deployment",
+            "info":"Successfully launched and commissioned aboard PSLV-C58."
+        },
+
+        {
+            "title":"Supports global astrophysics research",
+            "info":"Provides valuable scientific observations of high-energy cosmic phenomena."
+        }
+
+    ],
+
+    "timeline":[
+
+        {
+            "date":"1 January 2024",
+            "event":"Successfully launched aboard PSLV-C58."
+        },
+
+        {
+            "date":"January 2024",
+            "event":"Payloads commissioned and tested."
+        },
+
+        {
+            "date":"2024",
+            "event":"Scientific observations commenced."
+        },
+
+        {
+            "date":"Present",
+            "event":"Continues observing high-energy celestial objects."
+        }
+
+    ]
+  },
+  {
+    "id": 7,
+
+    "name": "NISAR",
+
+    "year": 2025,
+
+    "rocket": "GSLV-F16",
+
+    "destination": "Sun-synchronous Orbit",
+
+    "status": "Upcoming",
+
+    "launch_date": "Planned 2025",
+
+    "duration": "3 Years (Planned)",
+
+    "description": "NASA-ISRO Synthetic Aperture Radar (NISAR) is a joint Earth observation satellite designed to monitor changes in Earth's land and ice surfaces with unprecedented precision.",
+
+    "image": "nisar.jpg",
+
+    "engineering_significance": "Demonstrates advanced dual-frequency radar imaging and international collaboration between ISRO and NASA.",
+
+    "objectives":[
+        {
+            "title":"Monitor Earth's surface",
+            "info":"Measure changes in forests, glaciers, volcanoes and earthquakes."
+        },
+        {
+            "title":"Support disaster management",
+            "info":"Provide rapid data for floods, landslides and natural disasters."
+        },
+        {
+            "title":"Climate monitoring",
+            "info":"Study ice sheets, biomass and land deformation."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"L-band SAR",
+            "info":"NASA-built radar capable of penetrating vegetation."
+        },
+        {
+            "title":"S-band SAR",
+            "info":"ISRO-built radar for high-resolution Earth observation."
+        }
+    ],
+
+    "achievements":[
+        {
+            "title":"NASA-ISRO collaboration",
+            "info":"One of the largest Earth observation collaborations between the two agencies."
+        },
+        {
+            "title":"Advanced radar technology",
+            "info":"Combines L-band and S-band SAR in a single satellite."
+        }
+    ],
+
+    "timeline":[
+        {
+            "date":"2025",
+            "event":"Planned launch aboard GSLV."
+        },
+        {
+            "date":"Launch +30 days",
+            "event":"Commissioning of radar instruments."
+        },
+        {
+            "date":"Mission Phase",
+            "event":"Global Earth observation begins."
+        }
+    ]
+  },
+   {
+    "id": 8,
+
+    "name": "Cartosat Series",
+
+    "year": 2005,
+
+    "rocket": "PSLV",
+
+    "destination": "Sun-synchronous Orbit",
+
+    "status": "Operational",
+
+    "launch_date": "5 May 2005",
+
+    "duration": "Multiple Missions",
+
+    "description": "The Cartosat series provides high-resolution images for mapping, infrastructure planning, urban development and national security.",
+
+    "image":"cartosat.jpg",
+
+    "engineering_significance":"Provides indigenous high-resolution satellite imaging for mapping and strategic applications.",
+
+    "objectives":[
+        {
+            "title":"High-resolution mapping",
+            "info":"Generate detailed maps of India's terrain."
+        },
+        {
+            "title":"Urban planning",
+            "info":"Support smart cities and infrastructure development."
+        },
+        {
+            "title":"National security",
+            "info":"Provide strategic imagery for defence applications."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"Panchromatic Camera",
+            "info":"Captures very high-resolution black-and-white images."
+        },
+        {
+            "title":"Multispectral Camera",
+            "info":"Captures images in multiple spectral bands."
+        }
+    ],
+
+    "achievements":[
+        {
+            "title":"Supports Digital India",
+            "info":"Provides mapping data for infrastructure projects."
+        },
+        {
+            "title":"Strategic imaging",
+            "info":"One of India's most capable Earth imaging satellite families."
+        }
+    ],
+
+    "timeline":[
+        {
+            "date":"2005",
+            "event":"Cartosat-1 launched."
+        },
+        {
+            "date":"2007-2022",
+            "event":"Successive Cartosat satellites expanded imaging capability."
+        },
+        {
+            "date":"Present",
+            "event":"Supports mapping and strategic applications."
+        }
+    ]
+   },
+    {
+    "id":9,
+
+    "name":"RISAT Series",
+
+    "year":2009,
+
+    "rocket":"PSLV",
+
+    "destination":"Sun-synchronous Orbit",
+
+    "status":"Operational",
+
+    "launch_date":"20 April 2009",
+
+    "duration":"Multiple Missions",
+
+    "description":"RISAT satellites use Synthetic Aperture Radar (SAR) to observe Earth day and night, regardless of weather conditions.",
+
+    "image":"risat.jpg",
+
+    "engineering_significance":"Introduced all-weather radar imaging capability for agriculture, disaster management and national security.",
+
+    "objectives":[
+        {
+            "title":"All-weather observation",
+            "info":"Capture images through clouds and during nighttime."
+        },
+        {
+            "title":"Agricultural monitoring",
+            "info":"Assess crops and soil moisture."
+        },
+        {
+            "title":"Disaster response",
+            "info":"Support flood and cyclone monitoring."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"Synthetic Aperture Radar",
+            "info":"Produces high-resolution radar images independent of weather."
+        }
+    ],
+
+    "achievements":[
+        {
+            "title":"First indigenous radar imaging capability",
+            "info":"Enabled continuous Earth observation in all weather conditions."
+        },
+        {
+            "title":"Supports disaster management",
+            "info":"Provides critical imagery during natural disasters."
+        }
+    ],
+
+    "timeline":[
+        {
+            "date":"2009",
+            "event":"RISAT-2 launched."
+        },
+        {
+            "date":"2012",
+            "event":"RISAT-1 launched with indigenous SAR."
+        },
+        {
+            "date":"Present",
+            "event":"RISAT satellites continue Earth observation missions."
+        }
+    ]
+   },
+    {
+    "id": 10,
+
+    "name": "Oceansat & Scatsat",
+
+    "year": 1999,
+
+    "rocket": "PSLV",
+
+    "destination": "Sun-synchronous Orbit",
+
+    "status": "Operational",
+
+    "launch_date": "26 May 1999",
+
+    "duration": "Multiple Missions",
+
+    "description": "The Oceansat and Scatsat satellite series monitor Earth's oceans, weather patterns, wind speeds and marine ecosystems to support fisheries, climate research and cyclone forecasting.",
+
+    "image": "oceansat.jpg",
+
+    "engineering_significance": "Provides continuous oceanographic and atmospheric observations that support weather forecasting, marine resource management and disaster preparedness.",
+
+    "objectives": [
+        {
+            "title": "Monitor ocean colour",
+            "info": "Study chlorophyll concentration and marine biological productivity."
+        },
+        {
+            "title": "Measure ocean surface winds",
+            "info": "Provide accurate wind vector data for weather prediction."
+        },
+        {
+            "title": "Support fisheries",
+            "info": "Help identify potential fishing zones using satellite observations."
+        }
+    ],
+
+    "payloads": [
+        {
+            "title": "Ocean Colour Monitor (OCM)",
+            "info": "Measures ocean colour to estimate biological activity."
+        },
+        {
+            "title": "Scatterometer",
+            "info": "Measures ocean surface wind speed and direction."
+        }
+    ],
+
+    "achievements": [
+        {
+            "title": "Improved cyclone forecasting",
+            "info": "Provided valuable ocean wind data for weather prediction."
+        },
+        {
+            "title": "Supports Indian fisheries",
+            "info": "Helps identify Potential Fishing Zones (PFZs)."
+        },
+        {
+            "title": "Climate monitoring",
+            "info": "Contributes to long-term ocean and climate studies."
+        }
+    ],
+
+    "timeline": [
+        {
+            "date": "1999",
+            "event": "Oceansat-1 launched."
+        },
+        {
+            "date": "2009",
+            "event": "Oceansat-2 expanded ocean observation capabilities."
+        },
+        {
+            "date": "2016",
+            "event": "Scatsat-1 launched for wind vector observations."
+        },
+        {
+            "date": "Present",
+            "event": "Operational support for weather and ocean monitoring."
+        }
+    ]
+   },
+   {
+    "id": 11,
+
+    "name": "INSAT & GSAT",
+
+    "year": 1983,
+
+    "rocket": "Various Launch Vehicles",
+
+    "destination": "Geostationary Orbit",
+
+    "status": "Operational",
+
+    "launch_date": "10 April 1983",
+
+    "duration": "Multiple Missions",
+
+    "description": "The INSAT and GSAT satellite series provide communication, television broadcasting, weather services and broadband connectivity across India.",
+
+    "image": "insat.jpg",
+
+    "engineering_significance": "Established India's indigenous communication satellite infrastructure supporting telecommunications, broadcasting and meteorology.",
+
+    "objectives": [
+        {
+            "title": "Telecommunication",
+            "info": "Provide reliable communication services across the country."
+        },
+        {
+            "title": "Television broadcasting",
+            "info": "Support satellite television and educational broadcasting."
+        },
+        {
+            "title": "Meteorological observations",
+            "info": "Monitor weather systems and improve forecasting."
+        }
+    ],
+
+    "payloads": [
+        {
+            "title": "Communication Transponders",
+            "info": "Relay television, voice and broadband communication."
+        },
+        {
+            "title": "Meteorological Sensors",
+            "info": "Monitor cloud cover and weather systems."
+        }
+    ],
+
+    "achievements": [
+        {
+            "title": "Nationwide communication network",
+            "info": "Connected remote regions through satellite communication."
+        },
+        {
+            "title": "Supports disaster communication",
+            "info": "Provides communication services during emergencies."
+        },
+        {
+            "title": "Strengthened Digital India",
+            "info": "Supports television, internet and educational services."
+        }
+    ],
+
+    "timeline": [
+        {
+            "date": "1983",
+            "event": "INSAT-1B became operational."
+        },
+        {
+            "date": "2001",
+            "event": "GSAT programme expanded communication capacity."
+        },
+        {
+            "date": "2010-Present",
+            "event": "Successive GSAT satellites enhanced communication services."
+        }
+    ]
+   },
+    {
+    "id": 12,
+
+    "name": "NavIC",
+
+    "year": 2013,
+
+    "rocket": "PSLV",
+
+    "destination": "Geosynchronous Orbit",
+
+    "status": "Operational",
+
+    "launch_date": "1 July 2013",
+
+    "duration": "Operational",
+
+    "description": "NavIC (Navigation with Indian Constellation) is India's independent regional satellite navigation system providing accurate positioning, navigation and timing services.",
+
+    "image": "navic.jpg",
+
+    "engineering_significance": "Provides India with an independent satellite navigation capability, reducing dependence on foreign navigation systems.",
+
+    "objectives": [
+        {
+            "title": "Regional navigation",
+            "info": "Provide accurate positioning services across India and nearby regions."
+        },
+        {
+            "title": "Timing services",
+            "info": "Deliver precise timing for critical infrastructure."
+        },
+        {
+            "title": "Strategic independence",
+            "info": "Ensure reliable navigation services without relying on foreign systems."
+        }
+    ],
+
+    "payloads": [
+        {
+            "title": "Navigation Payload",
+            "info": "Transmits navigation signals for positioning services."
+        },
+        {
+            "title": "Ranging Payload",
+            "info": "Supports accurate distance measurements between satellites and ground stations."
+        }
+    ],
+
+    "achievements": [
+        {
+            "title": "India's own navigation system",
+            "info": "Established an independent regional navigation satellite constellation."
+        },
+        {
+            "title": "Supports civilian and strategic users",
+            "info": "Provides positioning services for transportation, disaster response and defence."
+        },
+        {
+            "title": "Growing device integration",
+            "info": "Increasing adoption in smartphones, vehicles and navigation devices."
+        }
+    ],
+
+    "timeline": [
+        {
+            "date": "2013",
+            "event": "First IRNSS satellite launched."
+        },
+        {
+            "date": "2016",
+            "event": "NavIC constellation completed."
+        },
+        {
+            "date": "2018-Present",
+            "event": "Navigation services expanded across multiple sectors."
+        }
+    ]
+   },
 ]

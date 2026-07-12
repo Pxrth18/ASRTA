@@ -513,4 +513,142 @@ function showOrbitScene(){
 
     orbitScene.classList.remove("hidden");
 
+    startOrbitAnimation();
+
+}
+
+orbitButton.addEventListener("click", orbitRaise);
+
+// ===============================
+// ORBIT ANIMATION
+// ===============================
+
+let orbitAngle = -90;
+let orbitRadius = 210;
+let orbitAnimation;
+
+function startOrbitAnimation(){
+
+    orbitAnimation = setInterval(()=>{
+
+        orbitAngle += 0.6;
+
+        const rad = orbitAngle * Math.PI / 180;
+
+        const x = Math.cos(rad) * orbitRadius;
+
+        const y = Math.sin(rad) * orbitRadius;
+
+        spacecraft.style.left =
+        `calc(50% + ${x}px)`;
+
+        spacecraft.style.top =
+        `calc(50% + ${y}px)`;
+
+        // Rotate spacecraft so it points
+        // along the direction of travel
+
+        spacecraft.style.transform =
+        `translate(-50%,-50%) rotate(${orbitAngle+180}deg)`;
+
+    },20);
+
+}
+
+function orbitRaise(){
+
+    orbitButton.disabled = true;
+
+    orbitStatus.innerHTML =
+    "Orbit Raising Burn";
+
+    orbitLog.innerHTML =
+    "Main engine ignition...";
+
+    flame.style.opacity = 1;
+
+    flame.style.width = "18px";
+
+    flame.style.animation =
+    "flame .1s infinite";
+
+    let targetRadius = 320;
+
+    const raise = setInterval(()=>{
+
+        // Increase orbit radius
+        orbitRadius += 0.9;
+
+        // Zoom camera slightly
+        const scale =
+        1-(orbitRadius-210)/850;
+
+        earth.style.transform =
+        `translate(-50%,-50%) scale(${scale})`;
+
+        document.getElementById("orbitRing").style.width =
+        orbitRadius*2 + "px";
+
+        document.getElementById("orbitRing").style.height =
+        orbitRadius*2 + "px";
+
+        if(orbitRadius>235){
+
+            orbitLog.innerHTML =
+            "Perigee successfully raised.";
+
+        }
+
+        if(orbitRadius>270){
+
+            orbitLog.innerHTML =
+            "Apogee increasing...";
+
+        }
+
+        if(orbitRadius>305){
+
+            orbitLog.innerHTML =
+            "Transfer orbit almost achieved...";
+
+        }
+
+        if(orbitRadius>=targetRadius){
+
+            clearInterval(raise);
+
+            flame.style.opacity = 0;
+
+            spacecraft.style.transition=".4s";
+
+            orbitStatus.innerHTML =
+            "Transfer Orbit Achieved";
+
+            orbitLog.innerHTML =
+            "Awaiting Trans-Lunar Injection.";
+
+            orbitButton.disabled = false;
+
+            orbitButton.innerHTML =
+            "INITIATE TRANS-LUNAR INJECTION";
+
+            orbitButton.onclick =
+            transLunarInjectionOrbit;
+
+        }
+
+    },20);
+
+}
+function transLunarInjectionOrbit(){
+
+    orbitButton.disabled = true;
+
+    orbitStatus.innerHTML =
+    "Preparing TLI Burn";
+
+    orbitLog.innerHTML =
+    "Mission Control authorizes Trans-Lunar Injection.";
+
+    alert("🌙 Moon transfer is our next phase!");
 }

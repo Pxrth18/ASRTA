@@ -673,7 +673,7 @@ header h1{
 
     position:absolute;
 
-    width:180px;
+    width:220px;
 
     left:50%;
 
@@ -691,7 +691,7 @@ header h1{
 
     height:420px;
 
-    border:2px dashed rgba(255,255,255,.25);
+    border:3px dashed rgba(0,217,255,.35);
 
     border-radius:50%;
 
@@ -701,13 +701,15 @@ header h1{
 
     transform:translate(-50%,-50%);
 
+    transition:.08s linear;
+
 }
 
 #spacecraft{
 
     position:absolute;
 
-    width:55px;
+    width:38px;
 
     left:50%;
 

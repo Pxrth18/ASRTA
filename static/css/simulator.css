@@ -637,3 +637,100 @@ header h1{
     color:#9adfff;
 
 }
+
+/* ===========================
+      ORBIT SCENE
+=========================== */
+
+#orbitScene{
+
+    width:100vw;
+    height:100vh;
+
+    background:#020814;
+
+}
+
+.orbit-layout{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr 300px;
+
+    height:calc(100vh - 80px);
+
+}
+
+.orbit-space{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#orbitEarth{
+
+    position:absolute;
+
+    width:180px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+#orbitRing{
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border:2px dashed rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+#spacecraft{
+
+    position:absolute;
+
+    width:55px;
+
+    left:50%;
+
+    top:calc(50% - 210px);
+
+    transform:translate(-50%,-50%);
+
+}
+
+#orbitButton{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#00d9ff;
+
+    cursor:pointer;
+
+}

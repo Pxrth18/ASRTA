@@ -61,6 +61,21 @@ document.getElementById("transitionTitle");
 const launchpad =
 document.getElementById("launchpad");
 
+const orbitScene =
+document.getElementById("orbitScene");
+
+const spacecraft =
+document.getElementById("spacecraft");
+
+const orbitButton =
+document.getElementById("orbitButton");
+
+const orbitStatus =
+document.getElementById("orbitStatus");
+
+const orbitLog =
+document.getElementById("orbitLog");
+
 
 // ===============================
 // BEGIN MISSION
@@ -443,12 +458,7 @@ function continueAscent(){
 
     flame.style.opacity = 0;
 
-    nextCommand.innerHTML =
-    "INITIATE TRANS-LUNAR INJECTION";
-
-    nextCommand.classList.remove("hiddenButton");
-
-    nextCommand.onclick = transLunarInjection;
+    setTimeout(startTransition,1500);
 
     }
 
@@ -497,214 +507,10 @@ function startTransition(){
 
 }
 
-function orbitRaise1(){
+function showOrbitScene(){
 
-    nextCommand.classList.add("hiddenButton");
+    transitionScreen.style.display="none";
 
-    rocket.style.transition = "1s";
-
-    rocket.style.transform =
-    "translateX(-50%) scale(.35)";
-
-    flame.style.transform =
-    "translateX(-50%) scale(.35)";
-
-    countdown.innerHTML =
-    "ORBIT RAISE";
-
-    status.innerHTML =
-    "Orbit Raising Maneuver";
-
-    log.innerHTML =
-    "Firing engines to raise apogee...";
-
-    flame.style.opacity = 1;
-
-    flame.style.width = "35px";
-
-    let angle = -90;
-
-    let radius = 190;
-
-    const orbit = setInterval(()=>{
-
-        angle += 2;
-
-        const rad = angle*Math.PI/180;
-
-        const x = Math.cos(rad)*radius;
-
-        const y = Math.sin(rad)*radius;
-
-        rocket.style.left =
-        `calc(50% + ${x}px)`;
-
-        rocket.style.top =
-        `calc(50% + ${y}px)`;
-
-       flame.style.left =
-       rocket.style.left;
-
-       flame.style.top =
-       `calc(50% + ${y+28}px)`;
-
-        if(angle>=130){
-
-            clearInterval(orbit);
-
-            flame.style.opacity = 0;
-
-            log.innerHTML =
-            "Orbit successfully raised.";
-
-            status.innerHTML =
-            "Higher Earth Orbit";
-
-            countdown.innerHTML =
-            "ORBIT COMPLETE";
-
-            nextCommand.innerHTML =
-            "PERFORM SECOND ORBIT RAISE";
-
-            nextCommand.classList.remove("hiddenButton");
-
-            nextCommand.onclick =
-            orbitRaise2;
-
-        }
-
-    },20);
-
-}
-
-function orbitRaise2(){
-
-    alert("Orbit Raise 2 coming next!");
-
-}
-
-function transLunarInjection(){
-
-    nextCommand.classList.add("hiddenButton");
-
-    countdown.innerHTML =
-    "TLI BURN";
-
-    status.innerHTML =
-    "Trans-Lunar Injection";
-
-    log.innerHTML =
-    "Second stage reignition initiated.";
-
-    flame.style.opacity = 1;
-
-    flame.style.animation =
-    "flame .1s infinite";
-
-    document.body.style.animation =
-    "shake .12s";
-
-    setTimeout(()=>{
-
-        document.body.style.animation="";
-
-        cruiseToMoon();
-
-    },1800);
-
-}
-
-function cruiseToMoon(){
-
-    countdown.innerHTML =
-    "DEEP SPACE CRUISE";
-
-    status.innerHTML =
-    "Travelling to the Moon";
-
-    moon.style.opacity = 1;
-
-    let earthSize = 220;
-
-    let moonSize = 80;
-
-    let rocketX = 50;
-
-    let progress = 0;
-
-    const cruise = setInterval(()=>{
-
-        progress++;
-
-        rocketX += 0.7;
-
-        rocket.style.left =
-        rocketX + "%";
-
-        flame.style.left =
-        rocketX + "%";
-
-        earthSize -= 0.5;
-
-        earth.style.width =
-        earthSize + "px";
-
-        moonSize += 0.35;
-
-        moon.style.width =
-        moonSize + "px";
-
-        if(progress==40){
-
-            log.innerHTML =
-            "Spacecraft leaving Earth's sphere of influence.";
-
-        }
-
-        if(progress==80){
-
-            log.innerHTML =
-            "Trajectory correction maneuver completed.";
-
-        }
-
-        if(progress==130){
-
-            log.innerHTML =
-            "Approaching lunar gravitational field.";
-
-        }
-
-        if(progress>180){
-
-            clearInterval(cruise);
-
-            flame.style.opacity = 0;
-
-            countdown.innerHTML =
-            "LUNAR APPROACH";
-
-            status.innerHTML =
-            "Moon Encounter";
-
-            log.innerHTML =
-            "Ready for Lunar Orbit Insertion.";
-
-            nextCommand.innerHTML =
-            "BEGIN LUNAR ORBIT INSERTION";
-
-            nextCommand.classList.remove("hiddenButton");
-
-            nextCommand.onclick = lunarOrbitInsertion;
-
-        }
-
-    },40);
-
-}
-
-function lunarOrbitInsertion(){
-
-    alert("Next Phase Coming!");
+    orbitScene.classList.remove("hidden");
 
 }

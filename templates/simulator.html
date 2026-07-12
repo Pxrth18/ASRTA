@@ -88,6 +88,86 @@
 </div>
 
 <!-- ==========================
+      ORBIT SCENE
+========================== -->
+
+<div id="orbitScene" class="hidden">
+
+    <header>
+
+        <h1>🛰 ASTRA ORBITAL TRACKING</h1>
+
+    </header>
+
+    <div class="orbit-layout">
+
+        <!-- LEFT PANEL -->
+
+        <div class="left-panel">
+
+            <div class="panel">
+
+                <h2>MISSION STATUS</h2>
+
+                <p id="orbitStatus">
+
+                    Earth Parking Orbit
+
+                </p>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>MISSION LOG</h2>
+
+                <p id="orbitLog">
+
+                    Spacecraft successfully inserted into orbit.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CENTER -->
+
+        <div class="orbit-space">
+
+            <div id="orbitRing"></div>
+
+            <img id="orbitEarth"
+                 src="{{ url_for('static', filename='images/earth.png') }}">
+
+            <img id="spacecraft"
+                 src="{{ url_for('static', filename='images/rocket.png') }}">
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+            <div class="panel">
+
+                <h2>MISSION COMMAND</h2>
+
+                <button id="orbitButton">
+
+                    PERFORM ORBIT RAISING
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================
       MISSION CONTROL
 =========================== -->
 

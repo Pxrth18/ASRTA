@@ -571,7 +571,7 @@
 
     "destination": "Sun-synchronous Orbit",
 
-    "status": "Upcoming",
+    "status": "Operational",
 
     "launch_date": "Planned 2025",
 
@@ -1022,4 +1022,91 @@
         }
     ]
    },
+   {
+    "id": 13,
+
+    "name": "Aryabhata",
+
+    "year": 1975,
+
+    "rocket": "Kosmos-3M",
+
+    "destination": "Low Earth Orbit",
+
+    "status": "Completed",
+
+    "launch_date": "19 April 1975",
+
+    "duration": "6 Days (Scientific Operations)",
+
+    "description": "Aryabhata was India's first satellite, marking the beginning of the country's space age.It demonstrated India's capability in designing and building satellites.",
+
+    "image": "aryabhatta.jpg",
+
+    "engineering_significance": "Laid the foundation for India's indigenous satellite programme and inspired decades of advancements in space technology.",
+
+    "objectives": [
+        {
+            "title": "Demonstrate satellite technology",
+            "info": "Validate India's ability to design, build and operate an artificial satellite."
+        },
+        {
+            "title": "Conduct scientific experiments",
+            "info": "Perform studies in X-ray astronomy, aeronomy and solar physics."
+        },
+        {
+            "title": "Build indigenous expertise",
+            "info": "Develop engineering experience for future Indian satellites."
+        }
+    ],
+
+    "payloads": [
+        {
+            "title": "X-ray Astronomy Experiment",
+            "info": "Studied cosmic X-ray emissions."
+        },
+        {
+            "title": "Solar Physics Experiment",
+            "info": "Observed solar radiation and related phenomena."
+        },
+        {
+            "title": "Aeronomy Experiment",
+            "info": "Collected data about Earth's upper atmosphere."
+        }
+    ],
+
+    "achievements": [
+        {
+            "title": "India's first satellite",
+            "info": "Marked the birth of India's satellite programme."
+        },
+        {
+            "title": "Foundation for ISRO missions",
+            "info": "Provided valuable engineering knowledge for future missions."
+        },
+        {
+            "title": "Historic milestone",
+            "info": "Established India as a spacefaring nation."
+        }
+    ],
+
+    "timeline": [
+        {
+            "date": "1969",
+            "event": "Satellite project initiated by ISRO."
+        },
+        {
+            "date": "19 April 1975",
+            "event": "Successfully launched from Kapustin Yar, USSR."
+        },
+        {
+            "date": "April 1975",
+            "event": "Scientific experiments commenced."
+        },
+        {
+            "date": "Present",
+            "event": "Remembered as the beginning of India's satellite journey."
+        }
+    ]
+ }
 ]

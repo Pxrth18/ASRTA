@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>{{ rocket.name }}</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="earth-container">
+<img src="{{ url_for('static',
+filename='images/earth.png') }}"
+class="earth">
+</div>
+
+<nav>
+
+<div class="logo">
+🚀 ASTRA
+</div>
+
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/rockets">Rocket Gallery</a></li>
+</ul>
+
+</nav>
+
+<section class="mission-banner">
+
+<img
+src="{{ url_for('static',
+filename='images/' + rocket.image) }}"
+class="mission-image">
+
+<div class="mission-details">
+
+<h1>{{ rocket.name }}</h1>
+
+<h3>{{ rocket.full_name }}</h3>
+
+<span class="status">
+
+{{ rocket.status }}
+
+</span>
+
+<p class="mission-description">
+
+{{ rocket.description }}
+
+</p>
+
+</div>
+
+</section>
+
+<section class="mission-info">
+
+<div class="info-card">
+
+<h3>📅 First Launch</h3>
+
+<p>{{ rocket.first_launch }}</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>📏 Height</h3>
+
+<p>{{ rocket.height }}</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>⚖ Mass</h3>
+
+<p>{{ rocket.mass }}</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>🚀 Stages</h3>
+
+<p>{{ rocket.stages }}</p>
+
+</div>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>Payload Capacity</h2>
+
+{% if rocket.payload_leo %}
+
+<p><strong>LEO :</strong>
+{{ rocket.payload_leo }}</p>
+
+{% endif %}
+
+{% if rocket.payload_sso %}
+
+<p><strong>SSO :</strong>
+{{ rocket.payload_sso }}</p>
+
+{% endif %}
+
+{% if rocket.payload_gto %}
+
+<p><strong>GTO :</strong>
+{{ rocket.payload_gto }}</p>
+
+{% endif %}
+
+</section>
+
+<section class="glass-panel">
+
+<h2>Major Missions</h2>
+
+<ul>
+
+{% for mission in rocket.major_missions %}
+
+<li>{{ mission }}</li>
+
+{% endfor %}
+
+</ul>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>Interesting Facts</h2>
+
+<ul>
+
+{% for fact in rocket.facts %}
+
+<li>{{ fact }}</li>
+
+{% endfor %}
+
+</ul>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>Rocket Evolution</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>SLV-3</h3>
+
+<p>India's first satellite launch vehicle.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>ASLV</h3>
+
+<p>Technology development phase.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>PSLV</h3>
+
+<p>Reliable workhorse launcher.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>GSLV</h3>
+
+<p>Cryogenic technology.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>LVM3</h3>
+
+<p>Heavy lift launcher.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>SSLV</h3>
+
+<p>Small satellite launcher.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static',
+filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+[
+    {
+    "id": 1,
+
+    "name": "Chandrayaan-4",
+
+    "launch": "Planned",
+
+    "status": "Upcoming",
+
+    "mission_type": "Lunar Sample Return",
+
+    "duration": "Expected 1 Year",
+
+    "image": "chandrayaan4.jpg",
+
+    "description": "Chandrayaan-4 is India's planned lunar sample return mission. It aims to demonstrate technologies required to collect lunar material and safely return it to Earth.",
+
+    "engineering_significance": "Will demonstrate orbital docking, lunar ascent, autonomous sample collection and Earth return technologies.",
+
+    "future_impact": "Will prepare India for advanced lunar exploration and future human missions to the Moon.",
+
+    "progress": 45,
+
+    "objectives":[
+        {
+            "title":"Collect Lunar Samples",
+            "info":"Retrieve lunar soil and rocks for scientific analysis."
+        },
+        {
+            "title":"Autonomous Docking",
+            "info":"Perform spacecraft docking in lunar orbit."
+        },
+        {
+            "title":"Sample Return",
+            "info":"Safely return collected material back to Earth."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"Sampling Arm",
+            "info":"Collect lunar soil and rock specimens."
+        },
+        {
+            "title":"Return Capsule",
+            "info":"Carry lunar samples safely back to Earth."
+        }
+    ],
+
+    "challenges":[
+        "Orbital Docking",
+        "Precision Lunar Landing",
+        "Autonomous Sample Collection",
+        "Safe Earth Re-entry"
+    ],
+
+    "expected_outcomes":[
+        "Lunar sample analysis",
+        "Technology demonstration",
+        "Preparation for human missions",
+        "Support future Moon base missions"
+    ],
+
+    "timeline":[
+        {
+            "date":"Mission Approval",
+            "event":"Mission concept finalized."
+        },
+        {
+            "date":"Development",
+            "event":"Spacecraft and payload construction."
+        },
+        {
+            "date":"Testing",
+            "event":"Ground testing and validation."
+        },
+        {
+            "date":"Launch",
+            "event":"Mission launch."
+        },
+        {
+            "date":"Sample Return",
+            "event":"Return capsule lands on Earth."
+        }
+    ]
+     },
+
+    {
+    "id": 2,
+
+    "name": "Chandrayaan-5 (LUPEX)",
+
+    "launch": "Planned",
+
+    "status": "Upcoming",
+
+    "mission_type": "Lunar Polar Exploration",
+
+    "duration": "Expected 1 Year",
+
+    "image": "chandrayaan5.jpg",
+
+    "description": "Chandrayaan-5, also known as LUPEX (Lunar Polar Exploration Mission), is a collaborative mission between ISRO and JAXA aimed at exploring water ice deposits near the Moon's south pole using an advanced rover.",
+
+    "engineering_significance": "Demonstrates international collaboration, advanced rover mobility, precision landing and long-duration lunar exploration.",
+
+    "future_impact": "Will help scientists understand lunar water resources that could support future human settlements on the Moon.",
+
+    "progress": 35,
+
+    "objectives":[
+        {
+            "title":"Search for Water Ice",
+            "info":"Investigate permanently shadowed regions near the lunar south pole."
+        },
+        {
+            "title":"Operate Advanced Rover",
+            "info":"Deploy a larger rover capable of travelling longer distances."
+        },
+        {
+            "title":"Study Lunar Environment",
+            "info":"Analyze soil, temperature and surface composition."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"Advanced Rover",
+            "info":"A next-generation rover jointly developed for extended exploration."
+        },
+        {
+            "title":"Scientific Instruments",
+            "info":"Expected instruments for mineralogy, spectroscopy and environmental studies."
+        }
+    ],
+
+    "challenges":[
+        "Extreme Lunar Temperatures",
+        "Navigation in Shadowed Regions",
+        "Long-distance Rover Mobility",
+        "International Mission Coordination"
+    ],
+
+    "expected_outcomes":[
+        "Better understanding of lunar water ice",
+        "Support future lunar habitats",
+        "Technology validation",
+        "Enhanced Indo-Japanese collaboration"
+    ],
+
+    "timeline":[
+        {
+            "date":"Mission Planning",
+            "event":"Joint ISRO-JAXA mission development."
+        },
+        {
+            "date":"Spacecraft Development",
+            "event":"Lander and rover construction."
+        },
+        {
+            "date":"Launch",
+            "event":"Mission launch."
+        },
+        {
+            "date":"Surface Operations",
+            "event":"Rover explores lunar south pole."
+        }
+    ]
+    },
+
+    {
+    "id": 3,
+
+    "name": "Shukrayaan-1",
+
+    "launch": "Planned",
+
+    "status": "Upcoming",
+
+    "mission_type": "Venus Orbiter",
+
+    "duration": "Expected 4 Years",
+
+    "image": "shukrayaan.jpg",
+
+    "description": "Shukrayaan-1 is India's planned Venus exploration mission that will investigate the planet's atmosphere, surface and geological activity.",
+
+    "engineering_significance": "Will expand India's planetary exploration programme beyond Mars and the Moon using advanced remote sensing instruments.",
+
+    "future_impact": "Expected to improve scientific understanding of Venus and planetary climate evolution.",
+
+    "progress": 40,
+
+    "objectives":[
+        {
+            "title":"Study Venus Atmosphere",
+            "info":"Analyze atmospheric chemistry and cloud structure."
+        },
+        {
+            "title":"Surface Mapping",
+            "info":"Map Venus using radar and remote sensing."
+        },
+        {
+            "title":"Climate Research",
+            "info":"Understand greenhouse effects and planetary evolution."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"Synthetic Aperture Radar",
+            "info":"Expected to map Venus through dense clouds."
+        },
+        {
+            "title":"Atmospheric Spectrometer",
+            "info":"Study atmospheric gases and composition."
+        }
+    ],
+
+    "challenges":[
+        "Extreme Surface Temperatures",
+        "Dense Cloud Cover",
+        "Long-duration Orbital Operations",
+        "Deep Space Communication"
+    ],
+
+    "expected_outcomes":[
+        "Understanding Venusian climate",
+        "Surface geological maps",
+        "Atmospheric composition analysis",
+        "Support comparative planetology"
+    ],
+
+    "timeline":[
+        {
+            "date":"Mission Approval",
+            "event":"Mission planning and design."
+        },
+        {
+            "date":"Development",
+            "event":"Orbiter construction."
+        },
+        {
+            "date":"Launch",
+            "event":"Mission launch."
+        },
+        {
+            "date":"Science Operations",
+            "event":"Venus observation begins."
+        }
+    ]
+    },
+
+    {
+    "id": 4,
+
+    "name": "Bharatiya Antariksh Station",
+
+    "launch": "2035 (Planned)",
+
+    "status": "Upcoming",
+
+    "mission_type": "Space Station",
+
+    "duration": "Long-term",
+
+    "image": "bas.jpg",
+
+    "description": "The Bharatiya Antariksh Station will be India's first independent space station, supporting long-duration human spaceflight, scientific research and advanced space technologies.",
+
+    "engineering_significance": "Represents one of India's most ambitious space engineering projects involving modular station design, human life support systems and orbital operations.",
+
+    "future_impact": "Will enable continuous Indian presence in space and prepare for future lunar and deep-space missions.",
+
+    "progress": 20,
+
+    "objectives":[
+        {
+            "title":"Support Human Spaceflight",
+            "info":"Enable astronauts to stay in orbit for extended periods."
+        },
+        {
+            "title":"Microgravity Research",
+            "info":"Conduct scientific experiments impossible on Earth."
+        },
+        {
+            "title":"Technology Demonstration",
+            "info":"Validate systems for future deep-space missions."
+        }
+    ],
+
+    "payloads":[
+        {
+            "title":"Research Laboratories",
+            "info":"Dedicated laboratories for scientific experiments."
+        },
+        {
+            "title":"Life Support Systems",
+            "info":"Maintain a safe and habitable environment for astronauts."
+        }
+    ],
+
+    "challenges":[
+        "Space Station Assembly",
+        "Crew Safety",
+        "Long-duration Life Support",
+        "Regular Resupply Missions"
+    ],
+
+    "expected_outcomes":[
+        "Permanent Indian orbital laboratory",
+        "Advanced space research",
+        "Human spaceflight expertise",
+        "Preparation for deep-space exploration"
+    ],
+
+    "timeline":[
+        {
+            "date":"Concept Phase",
+            "event":"Mission architecture planned."
+        },
+        {
+            "date":"Development",
+            "event":"Station module construction."
+        },
+        {
+            "date":"Assembly",
+            "event":"Modules launched and assembled in orbit."
+        },
+        {
+            "date":"Operational",
+            "event":"Astronaut missions begin."
+        }
+    ]
+    }
+]

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ mission.name }} Mission Experience</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/simulator.css') }}">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<!-- ==========================
+        BRIEFING SCREEN
+=========================== -->
+
+<div id="briefingScreen">
+
+    <div class="briefing-card">
+
+        <h1>🚀 ASTRA MISSION CONTROL</h1>
+
+        <h2>{{ mission.name }}</h2>
+
+        <p class="mission-description">
+
+            {{ mission.description }}
+
+        </p>
+
+        <div class="brief-info">
+
+            <p><strong>Destination:</strong> {{ mission.destination }}</p>
+
+            <p><strong>Launch Vehicle:</strong> {{ mission.rocket }}</p>
+
+            <p><strong>Your Role:</strong> Mission Director</p>
+
+        </div>
+
+        <button id="beginMission">
+
+            BEGIN MISSION
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+     SCENE TRANSITION
+========================== -->
+
+<div id="transitionScreen" class="hidden">
+
+    <div class="transition-box">
+
+        <h1>🛰 ISRO TRACKING NETWORK</h1>
+
+        <h2 id="transitionTitle">
+            Switching Camera...
+        </h2>
+
+        <div class="loadingBar">
+
+            <div id="loadingFill"></div>
+
+        </div>
+
+        <p id="loadingText">
+
+            Connecting to Orbital Tracking Station...
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+      MISSION CONTROL
+=========================== -->
+
+<div id="missionControl" class="hidden">
+
+    <header>
+
+        <h1>🚀 ASTRA MISSION CONTROL</h1>
+
+    </header>
+
+    <div class="dashboard">
+
+        <!-- LEFT PANEL -->
+
+        <div class="left-panel">
+
+            <div class="panel">
+
+                <h2>MISSION STATUS</h2>
+
+                <p id="missionStatus">
+
+                    Awaiting Launch
+
+                </p>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>SYSTEM CHECKS</h2>
+
+                <ul id="systemChecks">
+
+                    <li>Navigation ⏳</li>
+                    <li>Telemetry ⏳</li>
+                    <li>Propulsion ⏳</li>
+                    <li>Communications ⏳</li>
+                    <li>Ground Systems ⏳</li>
+
+                </ul>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>MISSION LOG</h2>
+
+                <p id="missionLog">
+
+                    Waiting for launch authorization...
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- CENTER -->
+
+        <div class="scene">
+
+            <div id="camera">
+
+                <img id="rocket"
+                     src="{{ url_for('static', filename='images/rocket.png') }}">
+
+                <img id="boosterLeft"
+                     src="{{ url_for('static', filename='images/booster.png') }}">
+
+                <img id="boosterRight"
+                     src="{{ url_for('static', filename='images/booster.png') }}">
+
+                <div id="flash"></div>
+
+                <img id="moon"
+                     src="{{ url_for('static', filename='images/moon.png') }}">
+
+                <img id="earthOrbit"
+                     src="{{ url_for('static', filename='images/earth.png') }}">
+
+                <img id="flame"
+                     src="{{ url_for('static', filename='images/flame.png') }}">
+
+                <img id="smoke"
+                     src="{{ url_for('static', filename='images/smoke.png') }}">
+
+                <img id="launchpad"
+                     src="{{ url_for('static', filename='images/launchpad.png') }}">
+
+                 <div id="orbitPath"></div>    
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+            <div class="panel">
+
+                <h2>COUNTDOWN</h2>
+
+                <h1 id="countdown">
+
+                    READY
+
+                </h1>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>ALTITUDE</h2>
+
+                <h1 id="altitude">
+
+                    0 km
+
+                </h1>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>VELOCITY</h2>
+
+                <h1 id="velocity">
+
+                    0 km/s
+
+                </h1>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>MISSION COMMAND</h2>
+
+                  <button id="nextCommand" class="hiddenButton">
+
+                   SEPARATE STAGE
+
+                  </button>
+
+           </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/simulator.js') }}"></script>
+
+</body>
+
+</html>

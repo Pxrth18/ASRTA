@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Mission Control Access</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/access.css') }}">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="terminal">
+
+    <h1>🚀 ASTRA MISSION CONTROL</h1>
+
+    <h2>{{ mission.name }}</h2>
+
+    <p id="status">Authenticating Flight Director...</p>
+
+    <div class="progress-box">
+
+        <div id="progress"></div>
+
+    </div>
+
+    <p id="percent">0%</p>
+
+</div>
+
+<script>
+
+let progress = document.getElementById("progress");
+
+let percent = document.getElementById("percent");
+
+let status = document.getElementById("status");
+
+let value = 0;
+
+const interval = setInterval(() => {
+
+    value++;
+
+    progress.style.width = value + "%";
+
+    percent.innerHTML = value + "%";
+
+    if(value==25)
+        status.innerHTML="Connecting to Mission Control...";
+
+    if(value==50)
+        status.innerHTML="Loading Telemetry Systems...";
+
+    if(value==75)
+        status.innerHTML="Verifying Launch Authorization...";
+
+    if(value>=100){
+
+        clearInterval(interval);
+
+        status.innerHTML="ACCESS GRANTED";
+
+        setTimeout(()=>{
+
+            window.location.href="/simulator/{{ mission.id }}";
+
+        },1000);
+
+    }
+
+},25);
+
+</script>
+
+</body>
+
+</html>

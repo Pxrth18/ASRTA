@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ISRO Rocket Gallery</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="earth-container">
+<img src="{{ url_for('static', filename='images/earth.png') }}" class="earth">
+</div>
+
+<nav>
+
+<div class="logo">🚀 ASTRA</div>
+
+<ul>
+<li><a href="/">Home</a></li>
+</ul>
+
+</nav>
+
+<section class="missions-preview">
+
+<h2>🚀 ISRO Rocket Gallery</h2>
+
+<div class="mission-grid">
+
+{% for rocket in rockets %}
+
+<div class="mission-card">
+
+  <h3>{{ rocket.name }}</h3>
+  <br><br>
+
+  <p><strong>Status:</strong> {{ rocket.status }}</p>
+
+  <p><strong>Height:</strong> {{ rocket.height }}</p>
+
+  <p><strong>Stages:</strong> {{ rocket.stages }}</p>
+
+  <p>{{ rocket.description }}</p>
+
+  <a href="/rocketexplore/{{ rocket.id }}"
+  class="explore-btn">Explore Rocket</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

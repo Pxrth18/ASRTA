@@ -11,148 +11,284 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ASTRA</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
 <body>
 
-      <div id="stars"></div>
+    <div id="stars"></div>
 
-      <div class="earth-container">
-         <img src="{{ url_for('static', filename='images/earth.png') }}" alt="Earth" class="earth">
-      </div>
+    <div class="earth-container">
+        <img src="{{ url_for('static', filename='images/earth.png') }}" alt="Earth" class="earth">
+    </div>
 
-      <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
 
     <nav>
 
         <div class="logo">
-
             🚀 ASTRA
-
         </div>
 
         <ul>
-
             <li><a href="#">Home</a></li>
-
             <li><a href="#">Missions</a></li>
-
-            <li><a href="#">Rockets</a></li>
-
+            <li><a href="/rockets">Rockets</a></li>
             <li><a href="#">Timeline</a></li>
-
             <li><a href="#">Quiz</a></li>
-
             <li><a href="#">AI Assistant</a></li>
-
         </ul>
 
     </nav>
 
     <section class="hero">
 
-     <h1>
+        <h1>
+            Explore India's Journey Beyond Earth
+        </h1>
 
-        Explore India's Journey Beyond Earth
+        <p>
+            Interactive platform dedicated to ISRO missions,
+            rockets and the vision of Dr. APJ Abdul Kalam.
+        </p>
 
-     </h1>
-
-     <p>
-
-        Interactive platform dedicated to ISRO missions,
-        rockets and the vision of Dr. APJ Abdul Kalam.
-
-     </p>
-
-     <button>
-
-        Explore Missions
-
-     </button>
-
+        <button>
+            Explore Missions
+        </button>
 
     </section>
 
     <section class="stats">
 
-    <h2>ISRO AT A GLANCE</h2>
+        <h2>ISRO AT A GLANCE</h2>
 
-    <div class="stats-container">
+        <div class="stats-container">
 
-        <div class="stat-card">
-            <h3 class="counter" data-target="1969">0</h3>
-            <p>ISRO Founded in</p>
+            <div class="stat-card">
+                <h3 class="counter" data-target="1969">0</h3>
+                <p>ISRO Founded in</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 class="counter" data-target="130">0</h3>
+                <p>Launch Missions</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 class="counter" data-target="100">0</h3>
+                <p>Satellites</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 class="counter" data-target="99">0</h3>
+                <p>Mission Success (%)</p>
+            </div>
+
         </div>
 
-        <div class="stat-card">
-            <h3 class="counter" data-target="130">0</h3>
-            <p>Launch Missions</p>
+    </section>
+
+    <!-- Featured Missions -->
+
+    <section class="missions-preview">
+
+        <h2>Featured Missions</h2>
+
+        <div class="mission-grid">
+
+            {% for mission in missions %}
+
+            <div class="mission-card">
+
+                <h3>{{ mission.name }}</h3>
+
+                <span class="status">
+                    {{ mission.status }}
+                </span>
+
+                <p><strong>Destination:</strong> {{ mission.destination }}</p>
+
+                <p><strong>Rocket:</strong> {{ mission.rocket }}</p>
+
+                <p>{{ mission.description }}</p>
+
+                <a href="/mission/{{ mission.id }}" class="explore-btn">
+                    Explore Mission
+                </a>
+
+            </div>
+
+            {% endfor %}
+
         </div>
 
-        <div class="stat-card">
-            <h3 class="counter" data-target="100">0</h3>
-            <p>Satellites</p>
+    </section>
+
+    <section class="simulator-section">
+
+    <h2>🚀 Interactive Mission Simulator</h2>
+
+    <p class="sim-desc">
+        Step into the role of a Flight Director and experience India's most iconic
+        space missions through realistic mission simulations.
+    </p>
+
+    <div class="sim-grid">
+
+        <!-- Chandrayaan 3 -->
+
+        <div class="terminal-card">
+
+            <div class="terminal-header">
+                ● MISSION CONTROL TERMINAL
+            </div>
+
+            <div class="terminal-body">
+
+                <p><span>STATUS</span> READY</p>
+
+                <p><span>MISSION</span> Chandrayaan-3</p>
+
+                <p><span>ROLE</span> Flight Director</p>
+
+                <p><span>DURATION</span> 8-10 Minutes</p>
+
+                <p><span>DIFFICULTY</span> ★★★☆☆</p>
+
+            </div>
+
+            <a href="/simulate/1" class="terminal-btn">
+                ENTER MISSION CONTROL
+            </a>
+
         </div>
 
-        <div class="stat-card">
-            <h3 class="counter" data-target="99">0</h3>
-            <p>Mission Success (%)</p>
+        <!-- Mangalyaan -->
+
+        <div class="terminal-card">
+
+            <div class="terminal-header">
+                ● MISSION CONTROL TERMINAL
+            </div>
+
+            <div class="terminal-body">
+
+                <p><span>STATUS</span> READY</p>
+
+                <p><span>MISSION</span> Mangalyaan</p>
+
+                <p><span>ROLE</span> Flight Director</p>
+
+                <p><span>DURATION</span> 7 Minutes</p>
+
+                <p><span>DIFFICULTY</span> ★★★★☆</p>
+
+            </div>
+
+            <a href="/simulate/2" class="terminal-btn">
+                ENTER MISSION CONTROL
+            </a>
+
         </div>
+
+        <!-- Aditya -->
+
+        <div class="terminal-card">
+
+            <div class="terminal-header">
+                ● MISSION CONTROL TERMINAL
+            </div>
+
+            <div class="terminal-body">
+
+                <p><span>STATUS</span> READY</p>
+
+                <p><span>MISSION</span> Aditya-L1</p>
+
+                <p><span>ROLE</span> Flight Director</p>
+
+                <p><span>DURATION</span> 6 Minutes</p>
+
+                <p><span>DIFFICULTY</span> ★★☆☆☆</p>
+
+            </div>
+
+            <a href="/simulate/3" class="terminal-btn">
+                ENTER MISSION CONTROL
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Upcoming Missions -->
+
+    <section class="missions-preview">
+
+        <h2>🚀 Upcoming Future Missions</h2>
+
+        <div class="mission-grid">
+
+            {% for mission in upcoming %}
+
+            <div class="mission-card">
+
+                <h3>{{ mission.name }}</h3>
+
+                <span class="status">
+                    {{ mission.status }}
+                </span>
+
+                <p>{{ mission.description }}</p>
+
+                <p><strong>Launch:</strong> {{ mission.launch }}</p>
+
+                <a href="/upcoming/{{ mission.id }}" class="explore-btn">
+                         Mission Preview
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+   <section class="missions-preview">
+
+     <h2>🚀 ISRO Launch Vehicle Gallery</h2>
+
+      <p style="text-align:center;
+              max-width:800px;
+              margin:auto;
+              margin-bottom:40px;
+              font-size:18px;">
+
+        Discover the launch vehicles that powered India's remarkable space journey,
+        from the historic SLV-3 to the powerful LVM3 carrying Chandrayaan and
+        Gaganyaan missions.
+
+      </p>
+
+     <div style="text-align:center;">
+
+        <a href="/rockets" class="explore-btn">
+            Explore Rocket Gallery →
+        </a>
 
      </div>
 
     </section>
 
-    <section class="missions-preview">
-
-     <h2>Featured Missions</h2>
-
-      <div class="mission-grid">
-
-         {% for mission in missions %}
-
-         <a href="/mission/{{ mission.id }}" class="mission-link">
-
-          <div class="mission-card">
-
-              <h3>{{ mission.name }}</h3>
-
-              <span class="status">
-
-                  {{ mission.status }}
-
-              </span>
-
-              <p><strong>Destination:</strong> {{ mission.destination }}</p>
-
-              <p><strong>Rocket:</strong> {{ mission.rocket }}</p>
-
-              <p>{{ mission.description }}</p>
-
-              <a href="/mission/{{ mission.id }}" class="explore-btn">
-                Explore Mission 
-
-             </a> 
-
-
-          </div>
-         </a>
-
-         {% endfor %}
-
-      </div>
-
-    </section>
-    
-   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 

@@ -1,0 +1,217 @@
+[
+  {
+    "id": 1,
+    "name": "PSLV",
+    "full_name": "Polar Satellite Launch Vehicle",
+    "status": "Operational",
+    "first_launch": "20 September 1993",
+    "height": "44 m",
+    "diameter": "2.8 m",
+    "mass": "320 tonnes",
+    "stages": "4",
+    "payload_leo": "3,800 kg",
+    "payload_sso": "1,750 kg",
+    "description": "PSLV is ISRO's most reliable and versatile launch vehicle. It has launched satellites for India and more than 30 countries.",
+    "major_missions": [
+      "Chandrayaan-1",
+      "Mangalyaan",
+      "AstroSat",
+      "Aditya-L1",
+      "Cartosat Series"
+    ],
+    "facts": [
+      "Nicknamed the Workhorse of ISRO.",
+      "Successfully launched 104 satellites in a single mission.",
+      "Has one of the highest success rates among launch vehicles."
+    ],
+    "image": "pslv.jpg"
+  },
+
+  {
+    "id": 2,
+    "name": "GSLV Mk II",
+    "full_name": "Geosynchronous Satellite Launch Vehicle",
+    "status": "Operational",
+    "first_launch": "18 April 2001",
+    "height": "49 m",
+    "diameter": "3.4 m",
+    "mass": "415 tonnes",
+    "stages": "3",
+    "payload_leo": "6,000 kg",
+    "payload_gto": "2,500 kg",
+    "description": "GSLV Mk II uses India's indigenous cryogenic engine to launch heavy communication satellites.",
+    "major_missions": [
+      "GSAT Series",
+      "INSAT Series"
+    ],
+    "facts": [
+      "Uses indigenous cryogenic upper stage.",
+      "Designed mainly for geostationary missions.",
+      "Major milestone in Indian propulsion technology."
+    ],
+    "image": "gslv.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "LVM3 (GSLV Mk III)",
+    "full_name": "Launch Vehicle Mark-3",
+    "status": "Operational",
+    "first_launch": "5 June 2017",
+    "height": "43.5 m",
+    "diameter": "4 m",
+    "mass": "640 tonnes",
+    "stages": "3",
+    "payload_leo": "10,000 kg",
+    "payload_gto": "4,000 kg",
+    "description": "LVM3 is India's heaviest operational rocket and is used for Gaganyaan and deep-space missions.",
+    "major_missions": [
+      "Chandrayaan-2",
+      "Chandrayaan-3",
+      "OneWeb",
+      "Gaganyaan Test Flights"
+    ],
+    "facts": [
+      "India's most powerful launch vehicle.",
+      "Chosen for the Gaganyaan programme.",
+      "Capable of launching heavy satellites."
+    ],
+    "image": "lmv3.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "SSLV",
+    "full_name": "Small Satellite Launch Vehicle",
+    "status": "Operational",
+    "first_launch": "7 August 2022",
+    "height": "34 m",
+    "diameter": "2 m",
+    "mass": "120 tonnes",
+    "stages": "3 + Velocity Trimming Module",
+    "payload_leo": "500 kg",
+    "payload_sso": "300 kg",
+    "description": "SSLV is ISRO's compact launch vehicle designed for rapid and low-cost deployment of small satellites.",
+    "major_missions": [
+        "EOS-02",
+        "SSLV-D2",
+        "Technology Demonstration Missions"
+    ],
+    "facts": [
+        "Can be assembled in a short time.",
+        "Designed for commercial small satellite launches.",
+        "Requires minimal launch infrastructure."
+    ],
+    "image": "sslv.jpg"
+  },
+   {
+    "id": 5,
+    "name": "ASLV",
+    "full_name": "Augmented Satellite Launch Vehicle",
+    "status": "Retired",
+    "first_launch": "24 March 1987",
+    "height": "24 m",
+    "diameter": "1 m",
+    "mass": "41 tonnes",
+    "stages": "5",
+    "payload_leo": "150 kg",
+    "description": "ASLV was developed to bridge the gap between SLV-3 and PSLV and helped ISRO master complex launch technologies.",
+    "major_missions": [
+        "SROSS Series"
+    ],
+    "facts": [
+        "Introduced strap-on boosters.",
+        "Provided valuable experience for PSLV.",
+        "Retired after developmental missions."
+    ],
+    "image": "aslv.jpg"
+  },
+  {
+    "id": 6,
+    "name": "SLV-3",
+    "full_name": "Satellite Launch Vehicle-3",
+    "status": "Retired",
+    "first_launch": "10 August 1979",
+    "height": "22 m",
+    "diameter": "1 m",
+    "mass": "17 tonnes",
+    "stages": "4",
+    "payload_leo": "40 kg",
+    "description": "India's first experimental satellite launch vehicle led by Dr. A.P.J. Abdul Kalam.",
+    "major_missions": [
+        "Rohini RS-1"
+    ],
+    "facts": [
+        "India's first indigenous satellite launch vehicle.",
+        "Led by Dr. APJ Abdul Kalam.",
+        "Successfully placed Rohini satellite into orbit in 1980."
+    ],
+    "image": "slv3.jpg"
+   },
+    {
+    "id": 7,
+    "name": "RH-200",
+    "full_name": "Rohini RH-200",
+    "status": "Operational",
+    "first_launch": "1971",
+    "height": "3.5 m",
+    "diameter": "0.2 m",
+    "mass": "110 kg",
+    "stages": "2",
+    "description": "A two-stage sounding rocket used for atmospheric and meteorological research.",
+    "major_missions": [
+        "Atmospheric Experiments",
+        "Meteorological Studies"
+    ],
+    "facts": [
+        "Launched regularly from TERLS.",
+        "Used for upper atmosphere research.",
+        "One of ISRO's most frequently launched rockets."
+    ],
+    "image": "rh200.jpg"
+   },
+    {
+    "id": 8,
+    "name": "RH-300",
+    "full_name": "Rohini RH-300",
+    "status": "Operational",
+    "first_launch": "1970s",
+    "height": "5.6 m",
+    "diameter": "0.3 m",
+    "mass": "510 kg",
+    "stages": "2",
+    "description": "A sounding rocket used to study the upper atmosphere and ionosphere.",
+    "major_missions": [
+        "Upper Atmospheric Research"
+    ],
+    "facts": [
+        "Carries scientific payloads.",
+        "Supports atmospheric experiments.",
+        "Provides valuable meteorological data."
+    ],
+    "image": "rh300.webp"
+   },
+    {
+    "id": 9,
+    "name": "RH-560",
+    "full_name": "Rohini RH-560",
+    "status": "Operational",
+    "first_launch": "1970s",
+    "height": "11 m",
+    "diameter": "0.56 m",
+    "mass": "1300 kg",
+    "stages": "2",
+    "description": "The largest sounding rocket in the Rohini family, capable of carrying heavier scientific payloads to higher altitudes.",
+    "major_missions": [
+        "Upper Atmospheric Research",
+        "Scientific Payload Testing"
+    ],
+    "facts": [
+        "Largest Rohini sounding rocket.",
+        "Carries heavy research payloads.",
+        "Used for advanced atmospheric studies."
+    ],
+    "image": "rh560.jpg"
+    }
+
+]

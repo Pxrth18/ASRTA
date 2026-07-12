@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ mission.name }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="earth-container">
+    <img src="{{ url_for('static', filename='images/earth.png') }}" class="earth">
+</div>
+
+<nav>
+
+    <div class="logo">🚀 ASTRA</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+
+</nav>
+
+<section class="mission-banner">
+
+    <img src="{{ url_for('static', filename='images/' + mission.image) }}"
+         class="mission-image"
+         alt="{{ mission.name }}">
+
+    <div class="mission-details">
+
+        <h1>{{ mission.name }}</h1>
+
+        <span class="status upcoming-status">
+            🚀 {{ mission.status }}
+        </span>
+
+        <p class="mission-description">
+            {{ mission.description }}
+        </p>
+
+    </div>
+
+</section>
+
+<section class="glass-panel">
+
+    <h2>🚧 Mission Under Development</h2>
+
+    <p>
+        This mission is currently under development. The information presented
+        here is based on publicly available ISRO announcements and may evolve
+        as the mission progresses.
+    </p>
+
+</section>
+
+<section class="mission-info">
+
+    <div class="info-card">
+        <h3>🚀 Mission Type</h3>
+        <p>{{ mission.mission_type }}</p>
+    </div>
+
+    <div class="info-card">
+        <h3>📅 Expected Launch</h3>
+        <p>{{ mission.launch }}</p>
+    </div>
+
+    <div class="info-card">
+        <h3>⏱ Duration</h3>
+        <p>{{ mission.duration }}</p>
+    </div>
+
+    <div class="info-card">
+        <h3>📈 Progress</h3>
+        <p>{{ mission.progress }}%</p>
+    </div>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>📈 Mission Progress</h2>
+
+<div class="progress-container">
+
+<div class="progress-bar">
+
+<div class="progress-fill"
+style="width: {{ mission.progress }}%;">
+
+{{ mission.progress }}%
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>🎯 Mission Objectives</h2>
+
+{% for objective in mission.objectives %}
+
+<div class="info-item">
+
+<div class="item-title">
+
+{{ objective.title }}
+
+</div>
+
+<div class="tooltip">
+
+{{ objective.info }}
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</section>
+
+<section class="glass-panel">
+
+<h2>🛰 Proposed Payloads</h2>
+
+{% for payload in mission.payloads %}
+
+<div class="info-item">
+
+<div class="item-title">
+
+{{ payload.title }}
+
+</div>
+
+<div class="tooltip">
+
+{{ payload.info }}
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</section>
+
+<section class="glass-panel">
+
+<h2>⚙ Engineering Challenges</h2>
+
+<ul>
+
+{% for challenge in mission.challenges %}
+
+<li>{{ challenge }}</li>
+
+{% endfor %}
+
+</ul>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>🔬 Expected Scientific Outcomes</h2>
+
+<ul>
+
+{% for outcome in mission.expected_outcomes %}
+
+<li>{{ outcome }}</li>
+
+{% endfor %}
+
+</ul>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>🌍 Future Impact</h2>
+
+<p>
+
+{{ mission.future_impact }}
+
+</p>
+
+</section>
+
+<section class="glass-panel">
+
+<h2>🗓 Development Roadmap</h2>
+
+<div class="timeline">
+
+{% for event in mission.timeline %}
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+
+<h3>{{ event.date }}</h3>
+
+<p>{{ event.event }}</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -135,13 +135,18 @@
 
         <div class="orbit-space">
 
+            <div id="deepSpaceGlow"></div>
+
             <div id="orbitRing"></div>
 
-            <img id="orbitEarth"
+            <img id="earth"
                  src="{{ url_for('static', filename='images/earth.png') }}">
 
             <img id="spacecraft"
                  src="{{ url_for('static', filename='images/rocket.png') }}">
+
+            <img id="cruiseMoon"
+                  src="{{ url_for('static', filename='images/moon.png') }}">     
 
         </div>
 
@@ -260,6 +265,7 @@
                      src="{{ url_for('static', filename='images/launchpad.png') }}">
 
                  <div id="orbitPath"></div>    
+
 
             </div>
 

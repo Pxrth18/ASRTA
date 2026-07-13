@@ -669,7 +669,7 @@ header h1{
 
 }
 
-#orbitEarth{
+#earth{
 
     position:absolute;
 
@@ -734,5 +734,50 @@ header h1{
     background:#00d9ff;
 
     cursor:pointer;
+
+}
+
+/* ===========================
+      DEEP SPACE
+=========================== */
+
+#deepSpaceGlow{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(0,80,160,.18),
+    transparent 60%);
+
+    opacity:0;
+
+    transition:2s;
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+      MOON
+=========================== */
+
+#cruiseMoon{
+
+    position:absolute;
+
+    width:70px;
+
+    right:-180px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    transition:none;
+
+    opacity:1;
 
 }

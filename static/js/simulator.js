@@ -41,7 +41,7 @@ const flash =
 document.getElementById("flash");
 
 const earth =
-document.getElementById("earthOrbit");
+document.getElementById("earth");
 
 const moon =
 document.getElementById("moon");
@@ -75,6 +75,12 @@ document.getElementById("orbitStatus");
 
 const orbitLog =
 document.getElementById("orbitLog");
+
+const deepSpaceGlow =
+document.getElementById("deepSpaceGlow");
+
+const cruiseMoon =
+document.getElementById("cruiseMoon");
 
 
 // ===============================
@@ -129,7 +135,7 @@ function runSystemChecks() {
 
             log.innerHTML = "Launch authorization granted.";
 
-           alert("Calling Countdown");
+          
            setTimeout(startCountdown, 1200);
 
         }
@@ -187,7 +193,7 @@ function ignition() {
 
    
 
-    alert("Ignition");
+    
 
     countdown.innerHTML = "LIFT OFF";
 
@@ -640,15 +646,293 @@ function orbitRaise(){
     },20);
 
 }
+
 function transLunarInjectionOrbit(){
 
     orbitButton.disabled = true;
 
     orbitStatus.innerHTML =
-    "Preparing TLI Burn";
+    "Trans-Lunar Injection";
 
     orbitLog.innerHTML =
-    "Mission Control authorizes Trans-Lunar Injection.";
+    "Main engine ignition...";
 
-    alert("🌙 Moon transfer is our next phase!");
+    let progress = 0;
+
+    flame.style.opacity = 1;
+
+    flame.style.width = "18px";
+
+    flame.style.animation =
+    "flame .08s infinite";
+
+    const burn = setInterval(()=>{
+
+        progress++;
+
+        orbitRadius += 0.45;
+
+        orbitAngle += 0.25;
+
+        document.getElementById("orbitRing").style.opacity =
+        Math.max(1-progress/140,0);
+
+        earth.style.transform =
+        `translate(-50%,-50%) scale(${1-progress/220})`;
+
+        deepSpaceGlow.style.opacity =
+        progress/150;
+
+        if(progress==40){
+
+            orbitLog.innerHTML =
+            "Escaping Earth's gravity...";
+
+        }
+
+        if(progress==90){
+
+            orbitLog.innerHTML =
+            "Trajectory nominal...";
+
+        }
+
+        if(progress>150){
+
+            clearInterval(burn);
+
+            flame.style.opacity=0;
+
+            orbitStatus.innerHTML =
+            "Deep Space Cruise";
+
+            orbitLog.innerHTML =
+            "Spacecraft is travelling toward the Moon.";
+
+            beginMoonCruise();
+
+        }
+
+    },40);
+
+}
+function beginMoonCruise(){
+
+    clearInterval(orbitAnimation);
+
+    // Freeze spacecraft at screen center
+      spacecraft.style.transition = "none";
+      spacecraft.style.left = "50%";
+      spacecraft.style.top = "35%";
+      spacecraft.style.transform = "translate(-50%, -50%) rotate(0deg)";
+
+     // Reset Earth
+      
+      earth.style.top = "50%";
+      
+      earth.style.transform = "translate(-50%, -50%)";
+
+     // Reset Moon
+      cruiseMoon.style.right = "-180px";
+      cruiseMoon.style.width = "70px";
+
+    let progress = 0;
+
+    orbitButton.style.display="none";
+
+    const cruise = setInterval(()=>{
+
+        progress++;
+
+        // Earth becomes smaller
+        let earthSize =
+        Math.max(35,220-progress);
+
+        earth.style.width =
+        Math.max(40, 220 - progress) + "px";
+
+        earth.style.left =
+       (50 - progress * 0.08) + "%";
+
+        // Spacecraft moves to the right
+       // Curved trajectory
+
+       let shipX = progress * 0.25;
+       let shipY = Math.sin(progress / 35) * -12;
+
+       spacecraft.style.left =
+       (50 + shipX) + "%";
+
+       spacecraft.style.top =
+       (35 + shipY) + "%";
+
+       let angle =
+       -18 + Math.cos(progress/35)*22;
+
+       spacecraft.style.transform =
+       `translate(-50%,-50%) rotate(${angle}deg)`;
+
+        // Moon comes closer
+        // Moon moves toward centre
+        let moonRight =
+        Math.max(80,-180 + progress*2);
+
+        cruiseMoon.style.right =
+        moonRight + "px";
+
+        // Moon grows
+        let moonSize =
+        Math.min(240,70 + progress);
+
+        cruiseMoon.style.width =
+        moonSize + "px";
+
+        deepSpaceGlow.style.opacity =
+        Math.min(1,progress/120);
+
+        // Logs
+
+        if(progress==30){
+
+            orbitLog.innerHTML=
+            "Leaving Earth's sphere of influence.";
+
+        }
+
+        if(progress==70){
+
+            orbitLog.innerHTML=
+            "Cruising through deep space.";
+
+        }
+
+        if(progress==120){
+
+            orbitLog.innerHTML=
+            "Lunar gravity detected.";
+
+        }
+
+        if(progress>=170){
+
+            spacecraft.style.left = "84%";
+            spacecraft.style.top = "24%";
+            spacecraft.style.transform =
+            "translate(-50%,-50%) rotate(-35deg)";
+
+            clearInterval(cruise);
+
+            orbitStatus.innerHTML=
+            "Moon Encounter";
+
+            orbitLog.innerHTML=
+            "Preparing Lunar Orbit Insertion.";
+
+            orbitButton.style.display="block";
+
+            orbitButton.innerHTML=
+            "BEGIN LUNAR ORBIT INSERTION";
+
+            orbitButton.disabled=false;
+
+            orbitButton.onclick=
+            lunarOrbitScene;
+
+        }
+
+    },35);
+
+}
+
+function lunarOrbitScene(){
+
+    orbitButton.disabled = true;
+
+    orbitStatus.innerHTML =
+    "Lunar Orbit Insertion";
+
+    orbitLog.innerHTML =
+    "Performing retrograde burn...";
+
+    flame.style.opacity = 1;
+
+    flame.style.width = "16px";
+
+    flame.style.animation =
+    "flame .1s infinite";
+
+    setTimeout(()=>{
+
+        flame.style.opacity = 0;
+
+        orbitMoon();
+
+    },1800);
+
+}
+
+function orbitMoon(){
+
+    let angle = -90;
+
+    const radius = 120;
+
+    const orbit = setInterval(()=>{
+
+        angle += 2;
+
+        const rad = angle * Math.PI / 180;
+
+        const moonX = cruiseMoon.offsetLeft +
+                      cruiseMoon.offsetWidth/2;
+
+        const moonY = cruiseMoon.offsetTop +
+                      cruiseMoon.offsetHeight/2;
+
+        spacecraft.style.left =
+        (moonX + Math.cos(rad)*radius) + "px";
+
+        spacecraft.style.top =
+        (moonY + Math.sin(rad)*radius) + "px";
+
+        spacecraft.style.transform =
+        `translate(-50%,-50%) rotate(${angle+90}deg)`;
+
+        if(angle==40){
+
+            orbitLog.innerHTML =
+            "Lunar orbit successfully achieved.";
+
+        }
+
+        if(angle>=270){
+
+            clearInterval(orbit);
+
+            orbitStatus.innerHTML =
+            "Stable Lunar Orbit";
+
+            orbitLog.innerHTML =
+            "Ready for Vikram Lander Separation.";
+
+            orbitButton.style.display="block";
+
+            orbitButton.disabled=false;
+
+            orbitButton.innerHTML =
+            "SEPARATE VIKRAM LANDER";
+
+            orbitButton.onclick =
+            separateLander;
+
+        }
+
+    },25);
+
+}
+
+function separateLander(){
+
+    alert("🚀 Vikram Landing Sequence Coming Next!");
+
 }

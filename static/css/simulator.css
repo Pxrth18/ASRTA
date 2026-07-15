@@ -574,8 +574,6 @@ header h1{
 
     background:black;
 
-    display:none;
-
     justify-content:center;
 
     align-items:center;
@@ -779,5 +777,232 @@ header h1{
     transition:none;
 
     opacity:1;
+
+}
+
+#vikram{
+
+    position:absolute;
+
+    width:24px;
+
+    left:50%;
+
+    top:50%;
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+/* ===========================
+      LANDING SCENE
+=========================== */
+
+#landingScene{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000814;
+
+    overflow:hidden;
+
+}
+
+#landingSky{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+#moonSurface{
+
+    position:absolute;
+
+    width:150%;
+
+    left:-35%;
+
+    bottom:-28%;
+
+    z-index:1;
+
+}
+
+#landingVikram{
+
+    position:absolute;
+
+    width:80px;
+
+    left:50%;
+
+    top:12%;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+}
+
+#landingFlame{
+
+    position:absolute;
+
+    width:26px;
+
+    left:50%;
+
+    top:22%;
+
+    transform:translateX(-50%);
+
+    animation:flame .1s infinite;
+
+    z-index:6;
+
+}
+
+#successScreen{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.94);
+
+    
+    justify-content:center;
+    align-items:center;
+
+    z-index:5000;
+
+    animation:fadeIn 1.2s;
+
+}
+
+.successBox{
+
+    width:700px;
+
+    text-align:center;
+
+    border:1px solid rgba(0,217,255,.25);
+
+    background:rgba(15,25,45,.55);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+
+    padding:60px;
+
+    box-shadow:0 0 40px rgba(0,217,255,.15);
+
+}
+
+.successBox h1{
+
+    font-size:70px;
+
+    margin-bottom:25px;
+
+}
+
+.successBox h2{
+
+    font-size:48px;
+
+    font-weight:600;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+}
+
+.successBox h3{
+
+    font-size:22px;
+
+    color:#8dcfff;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+}
+
+.successBox h4{
+
+    font-size:34px;
+
+    color:white;
+
+    margin:35px 0;
+
+    font-weight:500;
+
+}
+
+.successBox p{
+
+    color:#cfd8e6;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+}
+
+.successBox span{
+
+    display:block;
+
+    margin-top:40px;
+
+    color:#7aa8c8;
+
+    font-style:italic;
+
+    font-size:18px;
+
+}
+
+.successBox button{
+
+    margin-top:45px;
+
+    padding:15px 34px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#00b7ff;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.successBox button:hover{
+
+    background:#0094d6;
+
+    transform:translateY(-2px);
 
 }

@@ -10,7 +10,8 @@ const missionControl = document.getElementById("missionControl");
 const beginBtn = document.getElementById("beginMission");
 
 const countdown = document.getElementById("countdown");
-
+const successScreen =
+document.getElementById("successScreen");
 const status = document.getElementById("missionStatus");
 
 const log = document.getElementById("missionLog");
@@ -18,13 +19,21 @@ const log = document.getElementById("missionLog");
 const altitude = document.getElementById("altitude");
 
 const velocity = document.getElementById("velocity");
-
+const vikram =
+document.getElementById("vikram");
 const flame = document.getElementById("flame");
 
 const smoke = document.getElementById("smoke");
 
 const rocket = document.getElementById("rocket");
+const landingScene =
+document.getElementById("landingScene");
 
+const landingVikram =
+document.getElementById("landingVikram");
+
+const landingFlame =
+document.getElementById("landingFlame");
 const camera = document.getElementById("camera");
 
 const checks = document.querySelectorAll("#systemChecks li");
@@ -81,6 +90,9 @@ document.getElementById("deepSpaceGlow");
 
 const cruiseMoon =
 document.getElementById("cruiseMoon");
+
+const orbitRing =
+document.getElementById("orbitRing");
 
 
 // ===============================
@@ -813,117 +825,76 @@ function beginMoonCruise(){
 
         }
 
-        if(progress>=170){
+        
 
-            spacecraft.style.left = "84%";
-            spacecraft.style.top = "24%";
-            spacecraft.style.transform =
-            "translate(-50%,-50%) rotate(-35deg)";
+            if(progress>=170){
 
-            clearInterval(cruise);
+             clearInterval(cruise);
 
-            orbitStatus.innerHTML=
-            "Moon Encounter";
+             spacecraft.style.left = "84%";
+             spacecraft.style.top = "24%";
+             spacecraft.style.transform =
+             "translate(-50%,-50%) rotate(-35deg)";
 
-            orbitLog.innerHTML=
-            "Preparing Lunar Orbit Insertion.";
+              orbitStatus.innerHTML =
+             "Moon Encounter";
 
-            orbitButton.style.display="block";
+             orbitLog.innerHTML =
+             "Preparing for Lunar Orbit Insertion.";
 
-            orbitButton.innerHTML=
-            "BEGIN LUNAR ORBIT INSERTION";
+             orbitButton.style.display = "none";
 
-            orbitButton.disabled=false;
+             setTimeout(startMoonTransition,2500);
 
-            orbitButton.onclick=
-            lunarOrbitScene;
-
-        }
+            }
+       
 
     },35);
 
 }
 
-function lunarOrbitScene(){
+function startMoonTransition(){
 
-    orbitButton.disabled = true;
+   
 
-    orbitStatus.innerHTML =
-    "Lunar Orbit Insertion";
+    orbitScene.classList.add("hidden");
 
-    orbitLog.innerHTML =
-    "Performing retrograde burn...";
+    transitionScreen.classList.remove("hidden");
+    transitionScreen.style.display = "flex";
 
-    flame.style.opacity = 1;
+    transitionTitle.innerHTML =
+    "LUNAR ORBIT CAMERA";
 
-    flame.style.width = "16px";
+    loadingFill.style.width = "0%";
 
-    flame.style.animation =
-    "flame .1s infinite";
+    loadingText.innerHTML =
+    "Receiving Deep Space Telemetry...";
 
-    setTimeout(()=>{
+    let p = 0;
 
-        flame.style.opacity = 0;
+    const load = setInterval(()=>{
 
-        orbitMoon();
+        p++;
 
-    },1800);
+        loadingFill.style.width = p + "%";
 
-}
+        if(p==30)
+            loadingText.innerHTML =
+            "Receiving Lunar Telemetry...";
 
-function orbitMoon(){
+        if(p==60)
+            loadingText.innerHTML =
+            "Acquiring Orbital Camera...";
 
-    let angle = -90;
+        if(p==90)
+            loadingText.innerHTML =
+            "Moon Successfully Acquired...";
 
-    const radius = 120;
+        if(p>=100){
 
-    const orbit = setInterval(()=>{
+            clearInterval(load);
 
-        angle += 2;
-
-        const rad = angle * Math.PI / 180;
-
-        const moonX = cruiseMoon.offsetLeft +
-                      cruiseMoon.offsetWidth/2;
-
-        const moonY = cruiseMoon.offsetTop +
-                      cruiseMoon.offsetHeight/2;
-
-        spacecraft.style.left =
-        (moonX + Math.cos(rad)*radius) + "px";
-
-        spacecraft.style.top =
-        (moonY + Math.sin(rad)*radius) + "px";
-
-        spacecraft.style.transform =
-        `translate(-50%,-50%) rotate(${angle+90}deg)`;
-
-        if(angle==40){
-
-            orbitLog.innerHTML =
-            "Lunar orbit successfully achieved.";
-
-        }
-
-        if(angle>=270){
-
-            clearInterval(orbit);
-
-            orbitStatus.innerHTML =
-            "Stable Lunar Orbit";
-
-            orbitLog.innerHTML =
-            "Ready for Vikram Lander Separation.";
-
-            orbitButton.style.display="block";
-
-            orbitButton.disabled=false;
-
-            orbitButton.innerHTML =
-            "SEPARATE VIKRAM LANDER";
-
-            orbitButton.onclick =
-            separateLander;
+            setTimeout(showMoonOrbit,700);
 
         }
 
@@ -931,8 +902,334 @@ function orbitMoon(){
 
 }
 
+function showMoonOrbit(){
+
+    
+
+    transitionScreen.classList.add("hidden");
+
+    transitionScreen.style.display = "none";
+    
+    orbitScene.classList.remove("hidden");
+     
+    // Earth disappears
+    earth.style.opacity = "0";
+   
+    orbitRing.style.opacity = "0";
+    
+
+    // Moon appears
+    cruiseMoon.style.opacity = "1";
+    cruiseMoon.style.width = "180px";
+    cruiseMoon.style.right = "calc(50% - 90px)";
+    cruiseMoon.style.top = "50%";
+    cruiseMoon.style.transform =
+    "translateY(-50%)";
+    
+    orbitStatus.innerHTML =
+    "Lunar Orbit Achieved";
+
+    orbitLog.innerHTML =
+    "Chandrayaan-3 is orbiting the Moon.";
+     
+    orbitButton.style.display = "block";
+
+  // orbitButton.innerHTML =
+   // "SEPARATE VIKRAM LANDER";
+   
+
+    // orbitButton.onclick = separateLander;
+
+    orbitButton.innerHTML =
+    "SEPARATE VIKRAM LANDER";
+
+    orbitButton.onclick =
+    separateLander;
+    
+    startMoonOrbitAnimation();
+    
+}
+
+let moonOrbitAnimation;
+let moonAngle = -90;
+
+function startMoonOrbitAnimation(){
+
+    
+
+    clearInterval(moonOrbitAnimation);
+
+    const radius = 140;
+
+    moonOrbitAnimation = setInterval(()=>{
+
+        moonAngle += 1.5;
+
+        const rad = moonAngle * Math.PI / 180;
+
+        // Moon centre
+        const moonRect = cruiseMoon.getBoundingClientRect();
+        const parentRect = cruiseMoon.parentElement.getBoundingClientRect();
+
+        const centerX =
+        moonRect.left - parentRect.left + moonRect.width/2;
+
+        const centerY =
+        moonRect.top - parentRect.top + moonRect.height/2;
+
+        spacecraft.style.width = "28px";
+
+        spacecraft.style.left =
+        (centerX + Math.cos(rad)*radius) + "px";
+
+        spacecraft.style.top =
+        (centerY + Math.sin(rad)*radius) + "px";
+
+        spacecraft.style.transform =
+        `translate(-50%,-50%) rotate(${moonAngle+90}deg)`;
+
+    },25);
+
+}
+
 function separateLander(){
 
-    alert("🚀 Vikram Landing Sequence Coming Next!");
+    orbitButton.disabled = true;
+
+    orbitStatus.innerHTML =
+    "Lander Separation";
+
+    orbitLog.innerHTML =
+    "Separating Vikram Lander...";
+
+    vikram.style.opacity = 1;
+
+    vikram.style.left = spacecraft.style.left;
+
+    vikram.style.top = spacecraft.style.top;
+
+    let separation = 0;
+
+    const sep = setInterval(()=>{
+
+    separation++;
+
+    vikram.style.left =
+    `calc(${spacecraft.style.left} - ${separation}px)`;
+
+    vikram.style.top =
+    `calc(${spacecraft.style.top} + ${separation*0.7}px)`;
+
+    if(separation>40){
+
+        clearInterval(sep);
+
+    }
+
+    },20);
+
+    setTimeout(()=>{
+
+        orbitStatus.innerHTML =
+        "Vikram Free Flight";
+
+        orbitLog.innerHTML =
+        "Vikram has separated successfully.";
+
+        orbitButton.disabled = false;
+
+        orbitButton.innerHTML =
+        "BEGIN POWERED DESCENT";
+
+        orbitButton.onclick =
+        startLandingTransition;
+    },2200);
+
+}
+
+function poweredDescent(){
+
+    orbitButton.disabled = true;
+
+    orbitStatus.innerHTML =
+    "Powered Descent";
+
+    orbitLog.innerHTML =
+    "Reducing altitude...";
+
+    let h = 100;
+
+    const descend = setInterval(()=>{
+
+        h--;
+
+        orbitLog.innerHTML =
+        "Altitude : " + h + " km";
+
+         vikram.style.top =
+        (parseFloat(spacecraft.style.top)-0.18) + "px";
+
+        if(h==30){
+
+            orbitLog.innerHTML =
+            "Hazard Detection Enabled";
+
+        }
+
+        if(h==10){
+
+            orbitLog.innerHTML =
+            "Searching Safe Landing Site";
+
+        }
+
+        if(h<=0){
+
+            clearInterval(descend);
+
+            missionSuccess();
+
+        }
+
+    },80);
+
+}
+
+function startLandingTransition(){
+
+    orbitScene.classList.add("hidden");
+
+    transitionScreen.classList.remove("hidden");
+
+    transitionScreen.style.display = "flex";
+
+    transitionTitle.innerHTML =
+    "LANDING CAMERA";
+
+    loadingFill.style.width = "0%";
+
+    loadingText.innerHTML =
+    "Separating Vikram Lander...";
+
+    let p = 0;
+
+    const load = setInterval(()=>{
+
+        p++;
+
+        loadingFill.style.width = p + "%";
+
+        if(p==30)
+            loadingText.innerHTML =
+            "Receiving Vikram Telemetry...";
+
+        if(p==60)
+            loadingText.innerHTML =
+            "Switching Surface Camera...";
+
+        if(p==90)
+            loadingText.innerHTML =
+            "Preparing Powered Descent...";
+
+        if(p>=100){
+
+            clearInterval(load);
+
+            setTimeout(showLandingScene,700);
+
+        }
+
+    },25);
+
+}
+
+function showLandingScene(){
+
+    transitionScreen.classList.add("hidden");
+
+    transitionScreen.style.display="none";
+
+    landingScene.classList.remove("hidden");
+
+    startLanding();
+
+}
+
+function startLanding(){
+
+    let altitude = 30;
+
+    let y = 12;
+
+    const descend = setInterval(()=>{
+
+        altitude -= 0.15;
+
+        let speed = Math.max(0.05, altitude/120);
+
+        y += speed;
+
+        landingVikram.style.top = y + "%";
+
+        landingFlame.style.top = (y + 9) + "%";
+
+        landingFlame.style.width =
+        Math.max(6, altitude*1.2) + "px";
+
+        orbitLog.innerHTML =
+        "Altitude : " + altitude.toFixed(1) + " km";
+
+        if(altitude < 20){
+
+            orbitLog.innerHTML =
+            "Rough Braking Phase";
+
+        }
+
+        if(altitude < 10){
+
+            orbitLog.innerHTML =
+            "Fine Braking Phase";
+
+        }
+
+        if(altitude < 3){
+
+            orbitLog.innerHTML =
+            "Vertical Descent";
+
+        }
+        
+        if(altitude <= 0){
+
+            clearInterval(descend);
+
+            landingComplete();
+
+        }
+
+    },60);
+
+}
+
+function landingComplete(){
+
+    landingFlame.style.opacity = "0";
+
+    setTimeout(()=>{
+
+        showSuccessScreen();
+
+    },2000);
+
+}
+
+function showSuccessScreen(){
+
+    landingScene.classList.add("hidden");
+
+    successScreen.classList.remove("hidden");
+
+    successScreen.style.display = "flex";
 
 }

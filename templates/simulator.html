@@ -87,6 +87,8 @@
 
 </div>
 
+
+
 <!-- ==========================
       ORBIT SCENE
 ========================== -->
@@ -144,6 +146,8 @@
 
             <img id="spacecraft"
                  src="{{ url_for('static', filename='images/rocket.png') }}">
+            <img id="vikram"
+                 src="{{ url_for('static', filename='images/vikram.png') }}">
 
             <img id="cruiseMoon"
                   src="{{ url_for('static', filename='images/moon.png') }}">     
@@ -171,6 +175,55 @@
     </div>
 
 </div>
+
+<!-- ==========================
+      LANDING SCENE
+========================== -->
+
+<div id="landingScene" class="hidden">
+
+    <div id="landingSky">
+
+        <img id="landingVikram"
+             src="{{ url_for('static', filename='images/vikram.png') }}">
+
+        <img id="landingFlame"
+             src="{{ url_for('static', filename='images/flame.png') }}">
+
+        <img id="moonSurface"
+             src="{{ url_for('static', filename='images/moon_Surface.png') }}">
+
+    </div>
+
+</div>
+
+<!-- <div id="moonScene" class="hidden">
+
+<header>
+<h1>🌕 LUNAR ORBIT</h1>
+</header>
+
+<div class="moon-space">
+
+    <img id="moonPlanet"
+         src="{{ url_for('static', filename='images/moon.png') }}">
+
+    <img id="moonCraft"
+         src="{{ url_for('static', filename='images/rocket.png') }}">
+
+</div>
+
+<div class="moonControls">
+
+<button id="landerButton"> 
+
+SEPARATE VIKRAM LANDER
+
+</button>
+
+</div>
+
+</div>-->
 
 <!-- ==========================
       MISSION CONTROL
@@ -329,8 +382,48 @@
 
 </div>
 
-<script src="{{ url_for('static', filename='js/simulator.js') }}"></script>
+<!-- ==========================
+      SUCCESS SCREEN
+========================== -->
+
+<div id="successScreen" class="hidden">
+
+    <div class="successBox">
+
+       <h2>MISSION SUCCESS</h2>
+
+    <h3>CHANDRAYAAN–3</h3>
+
+    <p>
+
+     The Vikram Lander has successfully
+     performed a soft landing on the lunar surface.
+
+     </p>
+
+    <h4>
+
+    INDIA IS ON THE MOON
+
+    </h4>
+
+    <span>
+
+    ASTRA Mission Experience Complete
+
+    </span>
+
+    <button onclick="location.href='/'">
+
+    RETURN TO ASTRA
+
+    </button>
+
+    </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/simulator.js') }}"></script>
 
 </body>
-
 </html>
